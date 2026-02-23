@@ -1,7 +1,8 @@
 ---
-layout: minima
+layout: default
 title: CV
 permalink: /
 ---
 
-{% include_relative cv.md %}
+{% capture cv_content %}{% include_relative cv.md %}{% endcapture %}
+{{ cv_content | markdownify }}
