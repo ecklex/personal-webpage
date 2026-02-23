@@ -1,0 +1,6 @@
+# _config.yml
+title: Max Mustermann
+description: Personal Website / CV
+baseurl: ""           # leer für root deployment
+url: "https://username.github.io"  # dein GitHub Pages URL
+theme: minimal-mistakes-jekyll    # Beispiel: beliebtes One-Pager/Portfolio Theme
