@@ -3,4 +3,9 @@ title: Max Mustermann
 description: Personal Website / CV
 baseurl: ""           # leer für root deployment
 url: "https://ecklex.github.io"  # dein GitHub Pages URL
-theme: minima    # Beispiel: beliebtes One-Pager/Portfolio Theme
+remote_theme: mmistakes/minimal-mistakes
+
+minimal_mistakes_skin: default
+
+plugins:
+  - jekyll-include-cache
