@@ -2,7 +2,7 @@
 
 Personal website and CV for Alexander Eckerlin, built with [Jekyll](https://jekyllrb.com/) and hosted on [GitHub Pages](https://pages.github.com/).
 
-🔗 **Live site:** [ecklex.github.io](https://ecklex.github.io)
+🔗 **Live site:** [ecklex.github.io/personal-webpage](https://ecklex.github.io/personal-webpage)
 
 ## Tech Stack
 

@@ -3,10 +3,11 @@ title: Alexander Eckerlin
 description: Personal Website & CV – Alexander Eckerlin, Publisher
 author: Alexander Eckerlin
 lang: de
-baseurl: ""           # leer für root deployment
-url: "https://ecklex.github.io/personal-webpage/"  # dein GitHub Pages URL
+baseurl: "/personal-webpage"  # Subpfad für GitHub Pages Projektseite
+url: "https://ecklex.github.io"  # dein GitHub Pages URL
 
 # Theme
 remote_theme: pages-themes/cayman@v0.2.0
 plugins:
   - jekyll-remote-theme
+  - jekyll-seo-tag
