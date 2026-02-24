@@ -1,8 +1,14 @@
 ---
-layout: single
-title: CV
-permalink: /
 ---
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ site.title }}</title>
+</head>
+<body>
 {% capture cv_content %}{% include_relative cv.md %}{% endcapture %}
 {{ cv_content | markdownify }}
+</body>
+</html>
