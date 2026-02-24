@@ -1,6 +1,8 @@
 # _config.yml
-title: Max Mustermann
-description: Personal Website / CV
+title: Alexander Eckerlin
+description: Personal Website & CV – Alexander Eckerlin, Publisher
+author: Alexander Eckerlin
+lang: de
 baseurl: ""           # leer für root deployment
 url: "https://ecklex.github.io"  # dein GitHub Pages URL
 
