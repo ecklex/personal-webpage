@@ -1,0 +1,19 @@
+name: Alexander Eckerlin
+subtitle: "Publisher | Schnittstellenkompetenz"
+intro: "Willkommen auf meiner persönlichen Website. Ich bin Alexander Eckerlin – Publisher mit Expertise an der Schnittstelle zwischen Redaktion, Technik und Kommunikation."
+
+sections:
+  - title: Über mich
+    text: "Ich bringe fundierte Erfahrung in der Verlagsbranche mit und verstehe es, redaktionelle Prozesse mit technischen Anforderungen zu verbinden. Mein Fokus liegt auf klarer Kommunikation und effizienten Abläufen."
+
+  - title: "Kenntnisse & Kompetenzen"
+    items:
+      - "Verlagsmanagement & redaktionelle Koordination"
+      - "Schnittstelle zwischen Redaktion und Technik"
+      - Projektmanagement
+      - "Digitale Medien & Content-Strategie"
+
+  - title: Kontakt
+    links:
+      - label: github.com/ecklex
+        url: "https://github.com/ecklex"
