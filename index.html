@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+<h1>{{ site.data.content.name }}</h1>
+<h2>{{ site.data.content.subtitle }}</h2>
+
+<p>{{ site.data.content.intro }}</p>
+
+{% for section in site.data.content.sections %}
+<hr>
+<h2>{{ section.title }}</h2>
+{% if section.text %}
+<p>{{ section.text }}</p>
+{% endif %}
+{% if section.items %}
+<ul>
+{% for item in section.items %}
+  <li>{{ item }}</li>
+{% endfor %}
+</ul>
+{% endif %}
+{% if section.links %}
+<ul>
+{% for link in section.links %}
+  <li><a href="{{ link.url }}">{{ link.label }}</a></li>
+{% endfor %}
+</ul>
+{% endif %}
+{% endfor %}
