@@ -4,14 +4,10 @@ intro: "Willkommen auf meiner persönlichen Website. Ich bin Alexander Eckerlin 
 
 sections:
   - title: Erfahrungen
-    text: "Lektorat und Produktion (Content Design & Editorial Strategy)
-    text: "Carl-Auer Verlag, Heidelberg"
-
-    text: "Wissenschaftlicher Mitarbeiter"
-    text: "Universität Heidelberg"
-
-    text: "Werkstudent"
-    text: "Carl-Auer Verlag, Heidelberg"
+    items:
+      - "Lektorat und Produktion (Content Design & Editorial Strategy) – Carl-Auer Verlag, Heidelberg"
+      - "Wissenschaftlicher Mitarbeiter – Universität Heidelberg"
+      - "Werkstudent – Carl-Auer Verlag, Heidelberg"
   
   - title: Über mich
     text: "Mein Produkt ist Anschlussfähigkeit."
