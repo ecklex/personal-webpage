@@ -3,6 +3,16 @@ subtitle: "Publisher | Schnittstellenkompetenz"
 intro: "Willkommen auf meiner persönlichen Website. Ich bin Alexander Eckerlin – Publisher mit Expertise an der Schnittstelle zwischen Redaktion, Technik und Kommunikation. Ich sorge für Anschlussfähigkeit."
 
 sections:
+  - title: Erfahrungen
+    text: "Lektorat und Produktion (Content Design & Editorial Strategy)
+    text: "Carl-Auer Verlag, Heidelberg"
+
+    text: "Wissenschaftlicher Mitarbeiter"
+    text: "Universität Heidelberg"
+
+    text: "Werkstudent"
+    text: "Carl-Auer Verlag, Heidelberg"
+  
   - title: Über mich
     text: "Mein Produkt ist Anschlussfähigkeit."
 
