@@ -18,7 +18,7 @@ layout: default
 {% for card in section.cards %}
   <div class="card">
     {% if card.image %}
-    <img class="card-image" src="{{ card.image | relative_url }}" alt="{{ card.role }}">
+    <img class="card-image" src="{{ card.image | relative_url }}" alt="{{ card.image_alt }}">
     {% endif %}
     <div class="card-content">
       <strong class="card-role">{{ card.role }}</strong>
