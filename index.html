@@ -13,6 +13,21 @@ layout: default
 {% if section.text %}
 <p>{{ section.text }}</p>
 {% endif %}
+{% if section.type == "cards" %}
+<div class="card-container">
+{% for card in section.cards %}
+  <div class="card">
+    {% if card.image %}
+    <img class="card-image" src="{{ card.image | relative_url }}" alt="{{ card.role }}">
+    {% endif %}
+    <div class="card-content">
+      <strong class="card-role">{{ card.role }}</strong>
+      <span class="card-org">{{ card.organization }}</span>
+    </div>
+  </div>
+{% endfor %}
+</div>
+{% endif %}
 {% if section.items %}
 <ul>
 {% for item in section.items %}
