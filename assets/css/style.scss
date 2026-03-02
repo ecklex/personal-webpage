@@ -2,3 +2,47 @@
 ---
 
 @import 'jekyll-theme-cayman';
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border: 1px solid #e1e4e8;
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.card-image {
+  width: 48px;
+  height: 48px;
+  margin-right: 1.25rem;
+  flex-shrink: 0;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-role {
+  font-size: 1rem;
+  color: #24292e;
+}
+
+.card-org {
+  font-size: 0.9rem;
+  color: #586069;
+  margin-top: 0.2rem;
+}
