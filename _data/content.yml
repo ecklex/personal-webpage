@@ -84,8 +84,6 @@ sections:
 
   - title: Kontakt
     links:
-      - label: a.eckerlin@gmx.de
-        url: "mailto:a.eckerlin@gmx.de"
       - label: LinkedIn
         url: "https://www.linkedin.com/in/alexander-eckerlin"
       - label: github.com/ecklex
