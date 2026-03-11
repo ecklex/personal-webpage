@@ -4,6 +4,9 @@ layout: default
 
 <h1>{{ site.data.content.name }}</h1>
 <h2>{{ site.data.content.subtitle }}</h2>
+{% if site.data.content.location %}
+<p class="location">{{ site.data.content.location }}</p>
+{% endif %}
 
 <p>{{ site.data.content.intro }}</p>
 
@@ -23,6 +26,12 @@ layout: default
     <div class="card-content">
       <strong class="card-role">{{ card.role }}</strong>
       <span class="card-org">{{ card.organization }}</span>
+      {% if card.date %}
+      <time class="card-date">{{ card.date }}</time>
+      {% endif %}
+      {% if card.description %}
+      <p class="card-description">{{ card.description }}</p>
+      {% endif %}
     </div>
   </div>
 {% endfor %}

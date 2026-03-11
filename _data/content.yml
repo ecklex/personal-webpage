@@ -1,35 +1,92 @@
 name: Alexander Eckerlin
-subtitle: "Publisher | Schnittstellenkompetenz"
-intro: "Willkommen auf meiner persönlichen Website. Ich bin Alexander Eckerlin – Publisher mit Expertise an der Schnittstelle zwischen Redaktion, Technik und Kommunikation. Ich sorge für Anschlussfähigkeit."
+subtitle: "Komplexes Wissen verständlich und zugänglich machen | Content Design & Knowledge Communication | Content UX & Accessibility"
+location: "Metropolregion Rhein-Neckar"
+intro: >-
+  In meiner Arbeit bewege ich mich an der Schnittstelle von Sprache, Inhalt,
+  Technologie und Organisation. Als Lektor für wissenschaftliche und fachliche
+  Publikationen habe ich gelernt, wie entscheidend Struktur, Ausdruck und
+  Darstellung dafür sind, ob Inhalte zugänglich, anschlussfähig und nutzbar werden.
 
 sections:
-  - title: Erfahrungen
+  - title: Über mich
+    text: >-
+      Besonders interessiert mich die frühe Phase von Projekten: Wenn noch offen ist,
+      wie Wissen präsentiert, strukturiert oder vermittelt werden soll. Was braucht die
+      Zielgruppe? Was kann ungestraft weggelassen werden? Dabei arbeite ich konzeptionell,
+      forschend und oft prototypisch, um gute Lösungen sichtbar und testbar zu machen.
+      Neben der redaktionellen Arbeit beschäftige ich mich mit digitalen Formaten,
+      Barrierefreiheit und der Frage, wie sich komplexe Inhalte sinnvoll automatisieren
+      lassen, ohne ihre Qualität zu verlieren. Ich suche Kontexte, in denen Denken,
+      Struktur und Verständlichkeit und Wissen als etwas Lebendiges verstanden wird,
+      das gestaltet werden muss.
+
+  - title: Berufserfahrung
     type: cards
     cards:
       - role: "Lektorat und Produktion (Content Design & Editorial Strategy)"
-        organization: "Carl-Auer Verlag, Heidelberg"
+        organization: "Carl-Auer Systeme Verlag GmbH, Heidelberg"
+        date: "November 2021 – heute"
+        description: >-
+          Arbeit an der konzeptionellen, sprachlichen und strukturellen Aufbereitung
+          komplexer fachlicher Inhalte (Wissenschaft, Beratung, Organisation).
+          Verständliche Darstellung komplexen Wissens für unterschiedliche Zielgruppen.
+          Entwicklung und Optimierung redaktioneller Workflows für Print und Digital.
+          Digitale Barrierefreiheit und inhaltliche Zugänglichkeit.
+          Enge Zusammenarbeit mit Redaktion, Herstellung, Design und IT.
+          Einsatz technischer Werkzeuge (XML, XSLT, Automatisierung, KI) für Qualität
+          und Effizienz.
         image: "assets/images/publishing.svg"
         image_alt: "Publishing icon"
       - role: "Wissenschaftlicher Mitarbeiter"
-        organization: "Universität Heidelberg"
+        organization: "Ruprecht-Karls-Universität Heidelberg"
+        date: "März 2021 – Oktober 2021"
         image: "assets/images/university.svg"
         image_alt: "University icon"
       - role: "Werkstudent"
-        organization: "Carl-Auer Verlag, Heidelberg"
+        organization: "Carl-Auer Systeme Verlag GmbH, Heidelberg"
+        date: "Oktober 2019 – September 2021"
         image: "assets/images/work.svg"
         image_alt: "Work icon"
-  
-  - title: Über mich
-    text: "Mein Produkt ist Anschlussfähigkeit."
+
+  - title: Ausbildung
+    type: cards
+    cards:
+      - role: "Master of Arts (MA), Germanistik"
+        organization: "Ruprecht-Karls-Universität Heidelberg"
+        date: "2019 – 2021"
+        image: "assets/images/university.svg"
+        image_alt: "University icon"
+      - role: "Bachelor of Arts (BA), Germanistik und Geschichte"
+        organization: "Ruprecht-Karls-Universität Heidelberg"
+        date: "2015 – 2019"
+        image: "assets/images/university.svg"
+        image_alt: "University icon"
 
   - title: "Kenntnisse & Kompetenzen"
     items:
+      - "Künstliche Intelligenz (KI)"
+      - "Medien"
+      - "Organisationsberatung"
       - "Verlagsmanagement & redaktionelle Koordination"
       - "Schnittstelle zwischen Redaktion und Technik"
       - "Projektmanagement"
       - "Digitale Medien & Content-Strategie"
+      - "Digitale Barrierefreiheit & Zugänglichkeit"
+      - "XML, XSLT & Automatisierung"
+
+  - title: Zertifikate
+    items:
+      - "NLP-Practitioner"
+      - "Systemische Organisationsberatung (Grundkurs)"
+      - "AI Literacy: KI-Kompetenz für Medien"
+      - "XML-Grundlagen"
+      - "UX Strategy Fundamentals"
 
   - title: Kontakt
     links:
+      - label: a.eckerlin@gmx.de
+        url: "mailto:a.eckerlin@gmx.de"
+      - label: LinkedIn
+        url: "https://www.linkedin.com/in/alexander-eckerlin"
       - label: github.com/ecklex
         url: "https://github.com/ecklex"
