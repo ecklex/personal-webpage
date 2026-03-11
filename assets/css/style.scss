@@ -11,7 +11,7 @@
 
 .card {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   background: #fff;
   border: 1px solid #e1e4e8;
   border-radius: 8px;
@@ -45,4 +45,22 @@
   font-size: 0.9rem;
   color: #586069;
   margin-top: 0.2rem;
+}
+
+.card-date {
+  font-size: 0.85rem;
+  color: #6a737d;
+  margin-top: 0.2rem;
+}
+
+.card-description {
+  font-size: 0.9rem;
+  color: #444d56;
+  margin-top: 0.5rem;
+  line-height: 1.5;
+}
+
+.location {
+  font-size: 1rem;
+  color: #586069;
 }
