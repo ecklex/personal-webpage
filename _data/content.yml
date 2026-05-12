@@ -97,5 +97,15 @@ sections:
       - role: "Digitale Barrierefreiheit & Zugänglichkeit"
       - role: "XML, XSLT & Automatisierung"
 
+  - title: Sprachen
+    type: cards
+    cards:
+      - role: "Deutsch"
+        organization: "Muttersprache"
+      - role: "Englisch"
+        organization: "Sehr gut (C1)"
+      - role: "Spanisch"
+        organization: "Grundkenntnisse"
+
   - title: Kontakt
     form_endpoint: "https://formspree.io/f/xqennrpq"
