@@ -38,6 +38,8 @@ sections:
       - role: "Wissenschaftlicher Mitarbeiter"
         organization: "Ruprecht-Karls-Universität Heidelberg"
         date: "März 2021 – Oktober 2021"
+        description: >-
+          Im Forschungsprojekt "Culture Wars" der Universität Heidelberg habe ich über die Twitter-API Sprachdaten extrahiert und korpuslinguistisch untersucht.
       - role: "Werkstudent"
         organization: "Carl-Auer Systeme Verlag GmbH, Heidelberg"
         date: "Oktober 2019 – September 2021"
@@ -61,7 +63,7 @@ sections:
       - role: "XML-Grundlagen"
       - role: "UX Strategy Fundamentals"
 
-  - title: "Projects to be proud of"
+  - title: "Ausgewählte Projekte"
     type: cards
     cards: 
       - role: "AIdit"
