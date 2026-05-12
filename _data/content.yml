@@ -23,7 +23,7 @@ sections:
   - title: Berufserfahrung
     type: cards
     cards:
-      - role: "Lektorat und Produktion (Content Design & Editorial Strategy)"
+      - role: "Senior Managing Editor | Lektorat und Produktion"
         organization: "Carl-Auer Systeme Verlag GmbH, Heidelberg"
         date: "November 2021 – heute"
         description: >-
@@ -35,18 +35,12 @@ sections:
           Enge Zusammenarbeit mit Redaktion, Herstellung, Design und IT.
           Einsatz technischer Werkzeuge (XML, XSLT, Automatisierung, KI) für Qualität
           und Effizienz.
-        image: "assets/images/publishing.svg"
-        image_alt: "Publishing icon"
       - role: "Wissenschaftlicher Mitarbeiter"
         organization: "Ruprecht-Karls-Universität Heidelberg"
         date: "März 2021 – Oktober 2021"
-        image: "assets/images/university.svg"
-        image_alt: "University icon"
       - role: "Werkstudent"
         organization: "Carl-Auer Systeme Verlag GmbH, Heidelberg"
         date: "Oktober 2019 – September 2021"
-        image: "assets/images/work.svg"
-        image_alt: "Work icon"
 
   - title: Ausbildung
     type: cards
@@ -54,18 +48,30 @@ sections:
       - role: "Master of Arts (MA), Germanistik"
         organization: "Ruprecht-Karls-Universität Heidelberg"
         date: "2019 – 2021"
-        image: "assets/images/university.svg"
-        image_alt: "University icon"
       - role: "Bachelor of Arts (BA), Germanistik und Geschichte"
         organization: "Ruprecht-Karls-Universität Heidelberg"
         date: "2015 – 2019"
-        image: "assets/images/university.svg"
-        image_alt: "University icon"
+
+  - title: "Fortbildungen und Seminare"
+    items:
+      - "Systemische Organisationsberatung (Grundkurs)"
+      - "NLP-Practitioner"
+      - "AI Literacy: KI-Kompetenz für Medien"
+      - "XML-Grundlagen"
+      - "UX Strategy Fundamentals"
+
+  - title: "Projects to be proud of"
+    type: cards
+    cards: 
+      - role: "AIdit"
+        description: >-
+          Word-Add-In, das Text mittels lokaler KI (Ollama) korrigiert.
+        link: "https://www.linkedin.com/posts/alexander-eckerlin_lektorat-ki-textkorrektur-activity-7421454350364962816--U7K?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADVfgx8B6aVdfWPLdwYjkgMZcP-ib2FC3os"
+
 
   - title: "Kenntnisse & Kompetenzen"
     items:
       - "Künstliche Intelligenz (KI)"
-      - "Medien"
       - "Organisationsberatung"
       - "Verlagsmanagement & redaktionelle Koordination"
       - "Schnittstelle zwischen Redaktion und Technik"
@@ -73,14 +79,6 @@ sections:
       - "Digitale Medien & Content-Strategie"
       - "Digitale Barrierefreiheit & Zugänglichkeit"
       - "XML, XSLT & Automatisierung"
-
-  - title: Zertifikate
-    items:
-      - "NLP-Practitioner"
-      - "Systemische Organisationsberatung (Grundkurs)"
-      - "AI Literacy: KI-Kompetenz für Medien"
-      - "XML-Grundlagen"
-      - "UX Strategy Fundamentals"
 
   - title: Kontakt
     links:
