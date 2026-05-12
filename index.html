@@ -33,9 +33,9 @@ layout: default
       <p class="card-description">{{ card.description }}</p>
       {% endif %}
       {% if card.links %}
-      <div class="card-links">
+      <div class="card-links" style="display: flex; gap: 2rem;">
       {% for link in card.links %}
-        <a href="{{ link.url }}" target="_blank" rel="noopener" class="card-description">{{ link.label }}</a>
+        <a href="{{ link.url }}" target="_blank" rel="noopener" class="card-description" style="color: #0066cc;">{{ link.label }}</a>
       {% endfor %}
       </div>
       {% endif %}
