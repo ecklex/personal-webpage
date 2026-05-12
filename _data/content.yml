@@ -101,3 +101,4 @@ sections:
         url: "https://www.linkedin.com/in/alexander-eckerlin"
       - label: github.com/ecklex
         url: "https://github.com/ecklex"
+    form_endpoint: "https://formspree.io/f/xqennrpq"

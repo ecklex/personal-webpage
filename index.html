@@ -67,4 +67,15 @@ layout: default
 {% endfor %}
 </ul>
 {% endif %}
+{% if section.form_endpoint %}
+<form action="{{ section.form_endpoint }}" method="POST" class="contact-form">
+  <label for="name">Name</label>
+  <input type="text" id="name" name="name" required placeholder="Ihr Name">
+  <label for="email">E-Mail</label>
+  <input type="email" id="email" name="email" required placeholder="ihre@email.de">
+  <label for="message">Nachricht</label>
+  <textarea id="message" name="message" rows="5" required placeholder="Ihre Nachricht..."></textarea>
+  <button type="submit">Senden</button>
+</form>
+{% endif %}
 {% endfor %}
