@@ -32,6 +32,11 @@ layout: default
       {% if card.description %}
       <p class="card-description">{{ card.description }}</p>
       {% endif %}
+      {% if card.video %}
+      <video controls width="100%" style="margin-top: 0.75rem; border-radius: 4px;">
+        <source src="{{ card.video | relative_url }}" type="video/mp4">
+      </video>
+      {% endif %}
     </div>
   </div>
 {% endfor %}

@@ -68,6 +68,7 @@ sections:
         description: >-
           Word-Add-In, das Text mittels lokaler KI (Ollama) korrigiert.
         link: "https://www.linkedin.com/posts/alexander-eckerlin_lektorat-ki-textkorrektur-activity-7421454350364962816--U7K?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADVfgx8B6aVdfWPLdwYjkgMZcP-ib2FC3os"
+        video: "assets/video/aidit-demo.mp4"
       - role: "Literaturprüfer"
         description: >-
           App (MacOS), die Literaturverzeichnise mit einem Langdock-Agenten über eine API mit Datenbanken abgleicht, um die Literatureinträge zu verifizieren.
