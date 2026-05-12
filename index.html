@@ -37,6 +37,9 @@ layout: default
         <source src="{{ card.video | relative_url }}" type="video/mp4">
       </video>
       {% endif %}
+      {% if card.link and card.link != "" %}
+      <a href="{{ card.link }}" target="_blank" rel="noopener" style="margin-top: 0.5rem; display: inline-block;">Zum LinkedIn-Post</a>
+      {% endif %}
     </div>
   </div>
 {% endfor %}
