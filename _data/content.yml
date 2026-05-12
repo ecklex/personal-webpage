@@ -70,11 +70,12 @@ sections:
         links:
           - label: "LinkedIn-Post"
             url: "https://www.linkedin.com/posts/alexander-eckerlin_lektorat-ki-textkorrektur-activity-7421454350364962816--U7K?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADVfgx8B6aVdfWPLdwYjkgMZcP-ib2FC3os"
+          - label: "GitHub Repo"
+            url: "https://github.com/ecklex/AIdit"
         video: "assets/video/aidit-demo.mp4"
       - role: "Literaturprüfer"
         description: >-
           App (MacOS), die Literaturverzeichnisse mit einem Langdock-Agenten über eine API mit Datenbanken abgleicht, um die Literatureinträge zu verifizieren.
-        link: ""
 
   - title: "Kenntnisse & Kompetenzen"
     type: cards
