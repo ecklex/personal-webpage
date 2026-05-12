@@ -64,3 +64,23 @@
   font-size: 1rem;
   color: #586069;
 }
+
+.profile-header {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.profile-text {
+  flex: 1;
+}
+
+.profile-photo {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #e1e4e8;
+  flex-shrink: 0;
+}

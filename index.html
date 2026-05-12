@@ -2,13 +2,17 @@
 layout: default
 ---
 
-<h1>{{ site.data.content.name }}</h1>
-<h2>{{ site.data.content.subtitle }}</h2>
-{% if site.data.content.location %}
-<p class="location">{{ site.data.content.location }}</p>
-{% endif %}
-
-<p>{{ site.data.content.intro }}</p>
+<div class="profile-header">
+  <div class="profile-text">
+    <h1>{{ site.data.content.name }}</h1>
+    <h2>{{ site.data.content.subtitle }}</h2>
+    {% if site.data.content.location %}
+    <p class="location">{{ site.data.content.location }}</p>
+    {% endif %}
+    <p>{{ site.data.content.intro }}</p>
+  </div>
+  <img class="profile-photo" src="{{ 'assets/images/profile.jpg' | relative_url }}" alt="Profilfoto Alexander Eckerlin">
+</div>
 
 {% for section in site.data.content.sections %}
 <hr>
