@@ -14,6 +14,14 @@ Gemfile.lock
 # macOS
 .DS_Store
 
+# LaTeX build artifacts
+cv.tex
+cv.aux
+cv.log
+cv.out
+cv.fls
+cv.fdb_latexmk
+
 # Editor directories and files
 .idea/
 .vscode/

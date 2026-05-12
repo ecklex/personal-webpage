@@ -69,6 +69,22 @@
   color: #586069;
 }
 
+.cv-download-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1.25rem;
+  background: #0066cc;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  text-decoration: none;
+
+  &:hover {
+    background: #0052a3;
+    color: #fff;
+  }
+}
+
 .profile-header {
   display: flex;
   flex-direction: row;

@@ -1,0 +1,45 @@
+name: Generate CV PDF
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  generate-pdf:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Python dependencies
+        run: pip install pyyaml
+
+      - name: Install LaTeX
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            texlive-xetex \
+            texlive-latex-extra \
+            texlive-fonts-recommended \
+            texlive-lang-german \
+            latexmk
+
+      - name: Generate LaTeX source
+        run: python scripts/generate_cv.py
+
+      - name: Compile PDF
+        run: latexmk -xelatex -interaction=nonstopmode cv.tex
+
+      - name: Copy PDF to assets
+        run: cp cv.pdf assets/cv-alexander-eckerlin.pdf
+
+      - name: Commit and push PDF
+        run: |
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.name "github-actions[bot]"
+          git add assets/cv-alexander-eckerlin.pdf
+          git diff --staged --quiet || (git commit -m "chore: auto-generate CV PDF [skip ci]" && git push)
