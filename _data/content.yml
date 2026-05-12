@@ -53,12 +53,13 @@ sections:
         date: "2015 – 2019"
 
   - title: "Fortbildungen und Seminare"
-    items:
-      - "Systemische Organisationsberatung (Grundkurs)"
-      - "NLP-Practitioner"
-      - "AI Literacy: KI-Kompetenz für Medien"
-      - "XML-Grundlagen"
-      - "UX Strategy Fundamentals"
+    type: cards
+    cards:
+      - role: "Systemische Organisationsberatung (Grundkurs)"
+      - role: "NLP-Practitioner"
+      - role: "AI Literacy: KI-Kompetenz für Medien"
+      - role: "XML-Grundlagen"
+      - role: "UX Strategy Fundamentals"
 
   - title: "Projects to be proud of"
     type: cards
@@ -67,18 +68,22 @@ sections:
         description: >-
           Word-Add-In, das Text mittels lokaler KI (Ollama) korrigiert.
         link: "https://www.linkedin.com/posts/alexander-eckerlin_lektorat-ki-textkorrektur-activity-7421454350364962816--U7K?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADVfgx8B6aVdfWPLdwYjkgMZcP-ib2FC3os"
-
+      - role: "Literaturprüfer"
+        description: >-
+          App (MacOS), die Literaturverzeichnise mit einem Langdock-Agenten über eine API mit Datenbanken abgleicht, um die Literatureinträge zu verifizieren.
+        link: ""
 
   - title: "Kenntnisse & Kompetenzen"
-    items:
-      - "Künstliche Intelligenz (KI)"
-      - "Organisationsberatung"
-      - "Verlagsmanagement & redaktionelle Koordination"
-      - "Schnittstelle zwischen Redaktion und Technik"
-      - "Projektmanagement"
-      - "Digitale Medien & Content-Strategie"
-      - "Digitale Barrierefreiheit & Zugänglichkeit"
-      - "XML, XSLT & Automatisierung"
+    type: cards
+    cards:
+      - role: "Künstliche Intelligenz (KI)"
+      - role: "Organisationsberatung"
+      - role: "Verlagsmanagement & redaktionelle Koordination"
+      - role: "Schnittstelle zwischen Redaktion und Technik"
+      - role: "Projektmanagement"
+      - role: "Digitale Medien & Content-Strategie"
+      - role: "Digitale Barrierefreiheit & Zugänglichkeit"
+      - role: "XML, XSLT & Automatisierung"
 
   - title: Kontakt
     links:
