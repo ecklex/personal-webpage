@@ -32,13 +32,17 @@ layout: default
       {% if card.description %}
       <p class="card-description">{{ card.description }}</p>
       {% endif %}
+      {% if card.links %}
+      <div class="card-links">
+      {% for link in card.links %}
+        <a href="{{ link.url }}" target="_blank" rel="noopener" class="card-description">{{ link.label }}</a>
+      {% endfor %}
+      </div>
+      {% endif %}
       {% if card.video %}
       <video controls width="60%" style="margin-top: 0.75rem; border-radius: 4px;">
         <source src="{{ card.video | relative_url }}" type="video/mp4">
       </video>
-      {% endif %}
-      {% if card.link and card.link != "" %}
-      <a href="{{ card.link }}" target="_blank" rel="noopener" style="margin-top: 0.5rem; display: inline-block;">Zum LinkedIn-Post</a>
       {% endif %}
     </div>
   </div>
