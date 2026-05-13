@@ -23,16 +23,18 @@ def generate(content):
 
     lines = [
         r'\documentclass[11pt,a4paper]{moderncv}',
-        r'\moderncvstyle{casual}',
+        r'\moderncvstyle{classic}',
         r'\moderncvcolor{blue}',
         r'\usepackage[ngerman]{babel}',
-        r'\usepackage[scale=0.85]{geometry}',
+        r'\usepackage[scale=0.80]{geometry}',
         '',
         f'\\name{{{first}}}{{{last}}}',
         f'\\title{{{escape(content.get("subtitle", ""))}}}',
         f'\\address{{{escape(content.get("location", ""))}}}{{}}{{}}',
+        r'\email{a.eckerlin@gmx.de}',
         r'\social[linkedin]{alexander-eckerlin}',
         r'\social[github]{ecklex}',
+        r'\photo[96pt][0.4pt]{assets/images/profile}',
         '',
         r'\begin{document}',
         r'\makecvtitle',
@@ -46,7 +48,7 @@ def generate(content):
         lines.append(f'\\section{{{escape(section.get("title", ""))}}}')
 
         if section.get('text'):
-            lines.append(escape(section['text']))
+            lines.append(f'\\cvitem{{}}{{\\small {escape(section["text"])}}}')
             lines.append('')
 
         if section.get('type') == 'cards':
