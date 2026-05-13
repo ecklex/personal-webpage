@@ -10,9 +10,11 @@ layout: default
     <p class="location">{{ site.data.content.location }}</p>
     {% endif %}
     <p>{{ site.data.content.intro }}</p>
+  </div>
+  <div class="profile-photo-wrapper">
+    <img class="profile-photo" src="{{ 'assets/images/profile.jpg' | relative_url }}" alt="Profilfoto Alexander Eckerlin">
     <a href="{{ 'assets/cv-alexander-eckerlin.pdf' | relative_url }}" download class="cv-download-btn">CV herunterladen (PDF)</a>
   </div>
-  <img class="profile-photo" src="{{ 'assets/images/profile.jpg' | relative_url }}" alt="Profilfoto Alexander Eckerlin">
 </div>
 
 {% for section in site.data.content.sections %}

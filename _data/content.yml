@@ -78,6 +78,7 @@ sections:
       - role: "Literaturprüfer"
         description: >-
           App (MacOS), die Literaturverzeichnisse mit einem Langdock-Agenten über eine API mit Datenbanken abgleicht, um die Literatureinträge zu verifizieren.
+        video: "assets/video/literaturpruefer-demo.mp4"
       - role: "RAG-Bot for PDFs"
         description: >-
           Kleiner lokaler RAG-Bot, der Fragen zu PDF-Dokumenten beantworten kann.

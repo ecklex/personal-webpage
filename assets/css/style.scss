@@ -96,13 +96,20 @@
   flex: 1;
 }
 
+.profile-photo-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+
 .profile-photo {
   width: 150px;
   height: 150px;
   object-fit: cover;
   border-radius: 50%;
   border: 2px solid #e1e4e8;
-  flex-shrink: 0;
 }
 
 .contact-form {
