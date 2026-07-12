@@ -54,15 +54,16 @@ sections:
         organization: "Carl-Auer Systeme Verlag GmbH, Heidelberg"
         date: "November 2021 – heute"
         description: >-
-          Seit 2021 gemeinsam mit einem kleinen Team ein Programm von rund 150 Titeln
-          betreut und gemanagt – von der konzeptionellen, sprachlichen und strukturellen
-          Aufbereitung komplexer Fachinhalte (Wissenschaft, Beratung, Organisation) bis
-          zur verständlichen Darstellung für unterschiedliche Zielgruppen.
-          Entwicklung und Optimierung redaktioneller Workflows für Print und Digital,
-          digitale Barrierefreiheit und inhaltliche Zugänglichkeit.
-          Enge Zusammenarbeit mit Redaktion, Herstellung, Design und IT.
-          Einsatz technischer Werkzeuge (XML, XSLT, Automatisierung, KI) für Qualität
-          und Effizienz.
+          Fachliche Koordination eines Programms von rund 150 Titeln seit 2021 im Team –
+          von der konzeptionellen, sprachlichen und strukturellen Aufbereitung komplexer
+          Fachinhalte (Wissenschaft, Beratung, Organisation) bis zur zielgruppengerechten
+          Wissensvermittlung. Strukturierte Inhalte, Arbeit an medienneutraler Produktion
+          (XML/Single-Source-Publishing) für Print und Digital; Prozessoptimierung und
+          Aufbau einer automatisierten Single-Source-Publishing-Pipeline. Digitale
+          Barrierefreiheit nach BFSG. KI-gestützte Redaktionsarbeit (LLM, RAG, lokale
+          Sprachmodelle, Prompt Engineering) für Qualität und Effizienz. Crossfunktionale
+          Zusammenarbeit mit Redaktion, Herstellung, Design und IT sowie
+          Stakeholder-Abstimmung.
       - role: "Wissenschaftlicher Mitarbeiter"
         organization: "Ruprecht-Karls-Universität Heidelberg"
         date: "März 2021 – Oktober 2021"
@@ -94,14 +95,16 @@ sections:
   - title: "Kenntnisse & Kompetenzen"
     type: cards
     cards:
-      - role: "Künstliche Intelligenz (KI)"
-      - role: "Organisationsberatung"
+      - role: "KI-gestützte Redaktion: LLM, RAG, Prompt Engineering, lokale Sprachmodelle (Ollama)"
+      - role: "Strukturierte Inhalte: XML, XSLT, Single-Source-Publishing"
+      - role: "Digitale Barrierefreiheit (BFSG)"
+      - role: "Wissensmanagement & Wissensvermittlung"
       - role: "Verlagsmanagement & redaktionelle Koordination"
+      - role: "Team- & Stakeholder-Koordination"
       - role: "Schnittstelle zwischen Redaktion und Technik"
-      - role: "Projektmanagement"
       - role: "Digitale Medien & Content-Strategie"
-      - role: "Digitale Barrierefreiheit & Zugänglichkeit"
-      - role: "XML, XSLT & Automatisierung"
+      - role: "Projektmanagement"
+      - role: "Organisationsberatung"
 
   - title: Sprachen
     type: cards
