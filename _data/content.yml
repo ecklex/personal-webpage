@@ -6,21 +6,20 @@ linkedin: "alexander-eckerlin"
 github: "ecklex"
 intro: >-
   Ich arbeite an der Schnittstelle von Redaktion und Technik. Als Senior Managing
-  Editor bereite ich komplexe Fachinhalte sprachlich und strukturell auf – und baue
-  zugleich die technischen Werkzeuge (XML, Automatisierung, lokale KI), mit denen das
-  schneller und zugänglicher gelingt. Diese Doppelrolle, verständlich und technisch,
-  ist mein eigentliches Profil.
+  Editor bereite ich komplexe Fachinhalte sprachlich und strukturell auf und baue
+  nebenbei technische Werkzeuge (Automatisierung, KI, kleine Anwendungen), mit denen das
+  schneller und zugänglicher gelingt.
 
 sections:
   - title: Über mich
     text: >-
       Mein Weg verläuft quer: von der Germanistik über korpuslinguistische Forschung
-      mit der Twitter-API ins Verlagslektorat, von dort zu XML und redaktioneller
-      Automatisierung – und schließlich zum Bau eigener KI-Werkzeuge. Was wie Umwege
-      aussieht, ist ein Muster: Ich arbeite mich schnell in fremde Felder ein und
+      mit der Twitter-API ins Verlagslektorat, von dort zu bspw. XML und redaktioneller
+      Automatisierung und schließlich zum Bau eigener KI-Werkzeuge. Was wie Umwege
+      aussieht, ist mein Muster: Ich arbeite mich schnell in fremde Felder ein und
       verbinde sie. Ein KI-gestütztes Word-Add-In, eine macOS-App zur Literaturprüfung,
-      ein lokaler RAG-Bot – entstanden, weil ich ein redaktionelles Problem technisch
-      lösen wollte, nicht umgekehrt.
+      ein lokaler RAG-Bot sind entstanden, weil ich ein redaktionelles Problem technisch
+      lösen wollte.
 
   - title: "Ausgewählte Projekte"
     type: cards
