@@ -16,6 +16,12 @@ def escape(text):
         }[m.group(0)]
     return re.sub(r'[\\{}&%$#_^~]', replace, str(text))
 
+def escape_url(url):
+    # In URLs müssen % und # maskiert werden; Backslashes gibt es dort nicht.
+    if not url:
+        return ""
+    return str(url).replace('\\', r'\\').replace('%', r'\%').replace('#', r'\#')
+
 def generate(content):
     parts = content['name'].split(' ', 1)
     first = escape(parts[0])
@@ -34,9 +40,16 @@ def generate(content):
         f'\\name{{{first}}}{{{last}}}',
         f'\\title{{{escape(content.get("subtitle", ""))}}}',
         f'\\address{{{escape(content.get("location", ""))}}}{{}}{{}}',
-        r'\email{a.eckerlin@gmx.de}',
-        r'\social[linkedin]{alexander-eckerlin}',
-        r'\social[github]{ecklex}',
+    ]
+
+    if content.get('email'):
+        lines.append(f'\\email{{{escape(content["email"])}}}')
+    if content.get('linkedin'):
+        lines.append(f'\\social[linkedin]{{{escape(content["linkedin"])}}}')
+    if content.get('github'):
+        lines.append(f'\\social[github]{{{escape(content["github"])}}}')
+
+    lines += [
         r'\photo[96pt][0.4pt]{assets/images/profile}',
         '',
         r'\begin{document}',
@@ -68,8 +81,11 @@ def generate(content):
                 elif desc or card.get('links'):
                     links_str = ''
                     if card.get('links'):
-                        labels = [escape(l.get('label', '')) for l in card['links']]
-                        links_str = ' \\textbar{} '.join(labels)
+                        hrefs = [
+                            f'\\href{{{escape_url(l.get("url", ""))}}}{{{escape(l.get("label", ""))}}}'
+                            for l in card['links']
+                        ]
+                        links_str = ' \\textbar{} '.join(hrefs)
                     extra = f' \\textit{{({links_str})}}' if links_str else ''
                     lines.append(f'\\cventry{{}}{{{role}}}{{}}{{}}{{}}{{\\small {desc}{extra}}}')
                 else:

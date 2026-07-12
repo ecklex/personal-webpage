@@ -60,6 +60,24 @@
   line-height: 1.5;
 }
 
+.card-links {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 2rem;
+  margin-top: 0.5rem;
+}
+
+.card-link {
+  font-size: 0.9rem;
+  color: #0066cc;
+}
+
+.card-video {
+  margin-top: 0.75rem;
+  border-radius: 4px;
+}
+
 .page-header .btn {
   display: none;
 }
@@ -148,5 +166,27 @@
     &:hover {
       background: #0052a3;
     }
+
+    &:disabled {
+      background: #8ab4d8;
+      cursor: not-allowed;
+    }
+  }
+}
+
+.form-status {
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+
+  &:empty {
+    display: none;
+  }
+
+  &.is-success {
+    color: #1a7f37;
+  }
+
+  &.is-error {
+    color: #cf222e;
   }
 }

@@ -21,6 +21,7 @@ cv.log
 cv.out
 cv.fls
 cv.fdb_latexmk
+cv.xdv
 
 # Editor directories and files
 .idea/

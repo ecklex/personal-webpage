@@ -40,15 +40,16 @@ layout: default
       <p class="card-description">{{ card.description }}</p>
       {% endif %}
       {% if card.links %}
-      <div class="card-links" style="display: flex; flex-direction: row; flex-wrap: nowrap; gap: 2rem; margin-top: 0.5rem;">
+      <div class="card-links">
       {% for link in card.links %}
-        <a href="{{ link.url }}" target="_blank" rel="noopener" class="card-description" style="color: #0066cc; margin-top: 0;">{{ link.label }}</a>
+        <a href="{{ link.url }}" target="_blank" rel="noopener" class="card-link">{{ link.label }}</a>
       {% endfor %}
       </div>
       {% endif %}
       {% if card.video %}
-      <video controls width="60%" style="margin-top: 0.75rem; border-radius: 4px;">
+      <video controls width="60%" class="card-video" aria-label="{{ card.video_alt | default: card.role | append: ' – Demo-Video' }}">
         <source src="{{ card.video | relative_url }}" type="video/mp4">
+        <a href="{{ card.video | relative_url }}">Video herunterladen</a>
       </video>
       {% endif %}
     </div>
@@ -71,7 +72,7 @@ layout: default
 </ul>
 {% endif %}
 {% if section.form_endpoint %}
-<form action="{{ section.form_endpoint }}" method="POST" class="contact-form">
+<form action="{{ section.form_endpoint }}" method="POST" class="contact-form" id="contact-form">
   <label for="name">Name</label>
   <input type="text" id="name" name="name" required placeholder="Ihr Name">
   <label for="email">E-Mail</label>
@@ -79,6 +80,48 @@ layout: default
   <label for="message">Nachricht</label>
   <textarea id="message" name="message" rows="5" required placeholder="Ihre Nachricht..."></textarea>
   <button type="submit">Senden</button>
+  <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
 </form>
 {% endif %}
 {% endfor %}
+
+<script>
+  (function () {
+    var form = document.getElementById('contact-form');
+    if (!form) return;
+    var status = document.getElementById('form-status');
+    var button = form.querySelector('button[type="submit"]');
+
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+      status.className = 'form-status';
+      status.textContent = 'Wird gesendet …';
+      button.disabled = true;
+
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      }).then(function (response) {
+        if (response.ok) {
+          form.reset();
+          status.className = 'form-status is-success';
+          status.textContent = 'Danke! Ihre Nachricht wurde gesendet.';
+        } else {
+          return response.json().then(function (data) {
+            var msg = data && data.errors
+              ? data.errors.map(function (e) { return e.message; }).join(', ')
+              : 'Senden fehlgeschlagen. Bitte versuchen Sie es später erneut.';
+            status.className = 'form-status is-error';
+            status.textContent = msg;
+          });
+        }
+      }).catch(function () {
+        status.className = 'form-status is-error';
+        status.textContent = 'Senden fehlgeschlagen. Bitte versuchen Sie es später erneut.';
+      }).finally(function () {
+        button.disabled = false;
+      });
+    });
+  })();
+</script>

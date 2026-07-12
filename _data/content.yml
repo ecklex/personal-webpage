@@ -1,6 +1,9 @@
 name: Alexander Eckerlin
 subtitle: "Komplexes Wissen verständlich und zugänglich machen | Content Design & Knowledge Communication | Content UX & Accessibility"
 location: "Metropolregion Rhein-Neckar"
+email: "a.eckerlin@gmx.de"
+linkedin: "alexander-eckerlin"
+github: "ecklex"
 intro: >-
   In meiner Arbeit bewege ich mich an der Schnittstelle von Sprache, Inhalt,
   Technologie und Organisation. Als Lektor für wissenschaftliche und fachliche
@@ -75,10 +78,12 @@ sections:
           - label: "GitHub Repo"
             url: "https://github.com/ecklex/AIdit"
         video: "assets/video/aidit-demo.mp4"
+        video_alt: "Bildschirmaufnahme: Demo des Word-Add-Ins AIdit bei der KI-gestützten Textkorrektur"
       - role: "Literaturprüfer"
         description: >-
           App (MacOS), die Literaturverzeichnisse mit einem Langdock-Agenten über eine API mit Datenbanken abgleicht, um die Literatureinträge zu verifizieren.
         video: "assets/video/literaturpruefer-demo.mp4"
+        video_alt: "Bildschirmaufnahme: Demo der macOS-App Literaturprüfer beim Abgleich von Literaturverzeichnissen"
       - role: "RAG-Bot for PDFs"
         description: >-
           Kleiner lokaler RAG-Bot, der Fragen zu PDF-Dokumenten beantworten kann.
