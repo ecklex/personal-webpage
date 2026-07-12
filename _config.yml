@@ -3,7 +3,6 @@ title: Alexander Eckerlin
 tagline: "Redaktion · Technik · KI"  # kurzer Titel-Suffix (hält den <title>-Tag knapp)
 description: "Senior Managing Editor an der Schnittstelle von Redaktion, Technik und KI. Ich mache komplexes Fachwissen zugänglich, nutzbar und automatisierbar."
 author: Alexander Eckerlin
-image: /assets/images/profile.jpg  # og:image für Link-Vorschauen (LinkedIn, Slack …)
 lang: de
 baseurl: "/personal-webpage"  # Subpfad für GitHub Pages Projektseite
 url: "https://ecklex.github.io"  # dein GitHub Pages URL
@@ -14,3 +13,7 @@ plugins:
   - jekyll-remote-theme
   - jekyll-seo-tag
   - jekyll-sitemap
+
+# Größere Vorschaukarte beim Teilen (statt kleiner Thumbnail)
+twitter:
+  card: summary_large_image
