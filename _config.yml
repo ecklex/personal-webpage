@@ -1,6 +1,6 @@
 # _config.yml
 title: Alexander Eckerlin
-description: Personal Website & CV – Alexander Eckerlin, Publisher
+description: "Senior Managing Editor an der Schnittstelle von Redaktion, Technik und KI. Ich mache komplexes Fachwissen zugänglich, nutzbar und automatisierbar."
 author: Alexander Eckerlin
 lang: de
 baseurl: "/personal-webpage"  # Subpfad für GitHub Pages Projektseite

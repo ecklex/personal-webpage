@@ -33,6 +33,9 @@ layout: default
     {% if site.data.content.location %}
     <p class="location">{{ site.data.content.location }}</p>
     {% endif %}
+    {% if site.data.content.availability %}
+    <p class="availability">{{ site.data.content.availability }}</p>
+    {% endif %}
     <p>{{ site.data.content.intro }}</p>
   </div>
   <div class="profile-photo-wrapper">
@@ -106,6 +109,9 @@ layout: default
   <button type="submit">Senden</button>
   <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
 </form>
+{% if site.data.content.linkedin %}
+<p class="contact-alt">Oder direkt vernetzen: <a href="https://www.linkedin.com/in/{{ site.data.content.linkedin }}" target="_blank" rel="noopener" class="contact-linkedin">LinkedIn</a></p>
+{% endif %}
 {% endif %}
 {% endfor %}
 

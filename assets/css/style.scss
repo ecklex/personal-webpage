@@ -78,13 +78,44 @@
   border-radius: 4px;
 }
 
-.page-header .btn {
+// Cayman-Theme-Banner ausblenden – der eigene .profile-header ist der Seitenkopf.
+// Vermeidet doppelten Namen/Tagline und doppeltes <h1>.
+.page-header {
   display: none;
 }
 
 .location {
   font-size: 1rem;
   color: #586069;
+}
+
+.availability {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-top: 0.4rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #1a7f37;
+
+  &::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #1a7f37;
+  }
+}
+
+.contact-alt {
+  font-size: 0.9rem;
+  color: #586069;
+  margin-top: 0.75rem;
+}
+
+.contact-linkedin {
+  color: #0066cc;
+  font-weight: 600;
 }
 
 .cv-download-btn {
