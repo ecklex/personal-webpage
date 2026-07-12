@@ -22,7 +22,26 @@ layout: default
   "knowsAbout": [
     {% for section in site.data.content.sections %}{% if section.title contains "Kenntnisse" %}{% for card in section.cards %}{{ card.role | jsonify }}{% unless forloop.last %},{% endunless %}
     {% endfor %}{% endif %}{% endfor %}
-  ]
+  ],
+  "knowsLanguage": [
+    {% for section in site.data.content.sections %}{% if section.title == "Sprachen" %}{% for card in section.cards %}{{ card.role | jsonify }}{% unless forloop.last %},{% endunless %}
+    {% endfor %}{% endif %}{% endfor %}
+  ],
+  "image": {{ '/assets/images/profile.jpg' | absolute_url | jsonify }},
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Carl-Auer Systeme Verlag GmbH"
+  },
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "Ruprecht-Karls-Universität Heidelberg"
+  },
+  "hasOccupation": {
+    "@type": "Occupation",
+    "name": "Senior Managing Editor",
+    "occupationalCategory": "Redaktion, Publishing & Content",
+    "description": {{ site.data.content.subtitle | jsonify }}
+  }
 }
 </script>
 
