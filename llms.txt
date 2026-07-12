@@ -1,0 +1,26 @@
+---
+permalink: /llms.txt
+sitemap: false
+---
+# {{ site.data.content.name }}
+
+> {{ site.data.content.subtitle }}
+
+{{ site.data.content.intro }}
+
+- Website: {{ '/' | absolute_url }}
+- CV (PDF): {{ '/assets/cv-alexander-eckerlin.pdf' | absolute_url }}
+- LinkedIn: https://www.linkedin.com/in/{{ site.data.content.linkedin }}
+- GitHub: https://github.com/{{ site.data.content.github }}
+- Standort: {{ site.data.content.location }}
+{%- if site.data.content.availability %}
+- Status: {{ site.data.content.availability }}
+{%- endif %}
+{% for section in site.data.content.sections %}{% unless section.form_endpoint %}
+## {{ section.title }}
+{% if section.text %}
+{{ section.text }}
+{% endif %}{% if section.cards %}{% for card in section.cards %}
+- **{{ card.role }}**{% if card.organization %} — {{ card.organization }}{% endif %}{% if card.date %} ({{ card.date }}){% endif %}{% if card.description %}: {{ card.description }}{% endif %}{% if card.links %} [{% for link in card.links %}{{ link.label }}: {{ link.url }}{% unless forloop.last %}; {% endunless %}{% endfor %}]{% endif %}
+{%- endfor %}
+{% endif %}{% endunless %}{% endfor %}
