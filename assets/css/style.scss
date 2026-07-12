@@ -190,3 +190,24 @@
     color: #cf222e;
   }
 }
+
+@media (max-width: 600px) {
+  .profile-header {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .profile-photo-wrapper {
+    order: -1;
+    align-self: center;
+  }
+
+  .card-links {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .card-video {
+    width: 100%;
+  }
+}
