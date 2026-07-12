@@ -16,6 +16,9 @@ sitemap: false
 {%- if site.data.content.availability %}
 - Status: {{ site.data.content.availability }}
 {%- endif %}
+{%- if site.data.content.seeking %}
+- Gesuchte Rollen: {{ site.data.content.seeking }}
+{%- endif %}
 {% for section in site.data.content.sections %}{% unless section.form_endpoint %}
 ## {{ section.title }}
 {% if section.text %}

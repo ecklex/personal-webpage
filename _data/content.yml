@@ -2,6 +2,7 @@ name: Alexander Eckerlin
 subtitle: "Brückenbauer zwischen Redaktion und Technik — komplexes Wissen nutzbar machen mit Sprache, Struktur und KI"
 location: "Metropolregion Rhein-Neckar"
 availability: "Offen für neue Herausforderungen"
+seeking: "Content Design · Content Strategy · Content Operations"
 email: "a.eckerlin@gmx.de"
 linkedin: "alexander-eckerlin"
 github: "ecklex"
@@ -25,6 +26,14 @@ sections:
   - title: "Ausgewählte Projekte"
     type: cards
     cards:
+      - role: "Literaturprüfer"
+        description: >-
+          macOS-App, die halluzinierte und fehlerhafte Einträge in Literaturverzeichnissen
+          automatisch erkennt und herausfiltert – ein Prüfschritt, der im Lektorat sonst
+          viel Handarbeit kostet, in einem Bruchteil der Zeit. Gleicht die Einträge über
+          einen Langdock-Agenten per API mit Datenbanken ab.
+        video: "assets/video/literaturpruefer-demo.mp4"
+        video_alt: "Bildschirmaufnahme: Demo der macOS-App Literaturprüfer beim Abgleich von Literaturverzeichnissen"
       - role: "AIdit"
         description: >-
           Word-Add-In, das Text mittels lokaler KI (Ollama) korrigiert.
@@ -35,11 +44,6 @@ sections:
             url: "https://github.com/ecklex/AIdit"
         video: "assets/video/aidit-demo.mp4"
         video_alt: "Bildschirmaufnahme: Demo des Word-Add-Ins AIdit bei der KI-gestützten Textkorrektur"
-      - role: "Literaturprüfer"
-        description: >-
-          App (MacOS), die Literaturverzeichnisse mit einem Langdock-Agenten über eine API mit Datenbanken abgleicht, um die Literatureinträge zu verifizieren.
-        video: "assets/video/literaturpruefer-demo.mp4"
-        video_alt: "Bildschirmaufnahme: Demo der macOS-App Literaturprüfer beim Abgleich von Literaturverzeichnissen"
       - role: "RAG-Bot for PDFs"
         description: >-
           Kleiner lokaler RAG-Bot, der Fragen zu PDF-Dokumenten beantworten kann.

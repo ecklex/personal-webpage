@@ -56,6 +56,9 @@ image: /assets/images/profile.jpg
     {% if site.data.content.availability %}
     <p class="availability">{{ site.data.content.availability }}</p>
     {% endif %}
+    {% if site.data.content.seeking %}
+    <p class="seeking">Ich suche Rollen in: <strong>{{ site.data.content.seeking }}</strong></p>
+    {% endif %}
     <p>{{ site.data.content.intro }}</p>
   </div>
   <div class="profile-photo-wrapper">
