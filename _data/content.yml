@@ -1,5 +1,5 @@
 name: Alexander Eckerlin
-subtitle: "Ich baue KI-Werkzeuge für Fachabteilungen und führe sie ein — lokale LLMs, RAG und Automatisierung für konkrete Fachprobleme"
+subtitle: "KI-Werkzeuge für Fachabteilungen bauen und einführen | Lokale LLMs · RAG · Automatisierung · Prompt-Qualität & Halluzinationsprüfung | Senior Managing Editor"
 location: "Metropolregion Rhein-Neckar"
 availability: "Offen für neue Herausforderungen"
 seeking: "AI Enablement · Interne KI-Werkzeuge · Prozessautomatisierung"
@@ -7,12 +7,13 @@ email: "a.eckerlin@gmx.de"
 linkedin: "alexander-eckerlin"
 github: "ecklex"
 intro: >-
-  Die Prüfung von Literaturverzeichnissen auf halluzinierte Quellen kostet das
-  Lektorat Stunden. Ich habe eine macOS-App gebaut, die diese Einträge per API gegen
-  Fachdatenbanken abgleicht — aus zwei Stunden Handarbeit wurden zehn Minuten. So
-  arbeite ich: Ich finde wiederkehrende Handarbeit in Fachabteilungen und baue
-  KI-Werkzeuge, die sie übernehmen — lokal, datensparsam und so gebaut, dass die
-  Kolleg:innen sie im Alltag auch wirklich nutzen.
+  Die Prüfung von Literaturverzeichnissen auf halluzinierte Quellen kostet das Lektorat Stunden. Ich habe eine macOS-App gebaut, die diese Einträge per API gegen Fachdatenbanken abgleicht: Aus 2 Stunden Handarbeit wurden 10 Minuten. Als Verantwortlicher für digitale Barrierefreiheit habe ich das laufende Programm auf BFSG-Konformität umgestellt – vor der gesetzlichen Frist.
+
+Als Senior Managing Editor habe ich bisher ein Fachprogramm von rund 180 Titeln produziert. In dieser Zeit habe ich mit Markdown-Publishing-Pipelines experimentiert und mehrere KI-Werkzeuge für die Redaktion entwickelt – ein Word-Add-In zur Textkorrektur mit lokalem Sprachmodell, ein RAG-System für Dokumentenrecherche, die genannte Literaturprüfer-App.
+
+Mein Weg verläuft quer: Germanistik, korpuslinguistische Forschung mit der Twitter-API, Verlagslektorat, KI-gestützte Anwendungsentwicklung und redaktionelle Automatisierung, eigene KI-Tools. Was wie Umwege aussieht, ist die Methode – ich arbeite mich schnell in fremde Felder ein und verbinde sie, stelle Kreuzbezüge her.
+
+Schwerpunkte: Content Operations · Digitale Barrierefreiheit (BFSG, WCAG) · KI-gestützte Redaktion (LLM, RAG, Prompt Engineering, lokale Modelle) · Wissensvermittlung für Fachzielgruppen
 source_note: >-
   Diese Seite und das CV-PDF werden aus einer einzigen Datenquelle erzeugt — ein
   Single-Source-Publishing-Setup, das öffentlich einsehbar läuft.
