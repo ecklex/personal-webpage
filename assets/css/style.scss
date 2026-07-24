@@ -60,6 +60,23 @@
   line-height: 1.5;
 }
 
+.card-field {
+  font-size: 0.9rem;
+  color: #444d56;
+  margin-top: 0.4rem;
+  line-height: 1.5;
+}
+
+.card-label {
+  font-weight: 600;
+  color: #24292e;
+}
+
+.card-stack {
+  color: #586069;
+  font-size: 0.85rem;
+}
+
 .card-links {
   display: flex;
   flex-direction: row;
@@ -73,15 +90,45 @@
   color: #0066cc;
 }
 
+.card-video-figure {
+  margin: 0.75rem 0 0;
+}
+
 .card-video {
-  margin-top: 0.75rem;
+  width: 60%;
+  margin: 0;
   border-radius: 4px;
 }
 
-// Cayman-Theme-Banner ausblenden – der eigene .profile-header ist der Seitenkopf.
-// Vermeidet doppelten Namen/Tagline und doppeltes <h1>.
-.page-header {
-  display: none;
+.card-video-desc {
+  font-size: 0.85rem;
+  color: #586069;
+  margin-top: 0.4rem;
+  line-height: 1.5;
+}
+
+.source-note {
+  font-size: 0.85rem;
+  color: #586069;
+  margin-top: 1rem;
+}
+
+.site-footer-links {
+  margin-top: 0.5rem;
+
+  a {
+    margin-right: 1rem;
+  }
+}
+
+// Sichtbarer Fokus-Indikator für Tastaturnavigation (WCAG 2.4.7)
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+video:focus-visible {
+  outline: 3px solid #0b5c5c;
+  outline-offset: 2px;
 }
 
 .location {

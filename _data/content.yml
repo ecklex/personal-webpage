@@ -1,55 +1,104 @@
 name: Alexander Eckerlin
-subtitle: "Brückenbauer zwischen Redaktion und Technik — komplexes Wissen nutzbar machen mit Sprache, Struktur und KI"
+subtitle: "Ich baue KI-Werkzeuge für Fachabteilungen und führe sie ein — lokale LLMs, RAG und Automatisierung für konkrete Fachprobleme"
 location: "Metropolregion Rhein-Neckar"
 availability: "Offen für neue Herausforderungen"
-seeking: "Content Design · Content Strategy · Content Operations"
+seeking: "AI Enablement · Interne KI-Werkzeuge · Prozessautomatisierung"
 email: "a.eckerlin@gmx.de"
 linkedin: "alexander-eckerlin"
 github: "ecklex"
 intro: >-
-  Ich arbeite an der Schnittstelle von Redaktion und Technik. Als Senior Managing
-  Editor bereite ich komplexe Fachinhalte sprachlich und strukturell auf und baue
-  nebenbei technische Werkzeuge (Automatisierung, KI, kleine Anwendungen), mit denen das
-  schneller und zugänglicher gelingt.
+  Die Prüfung von Literaturverzeichnissen auf halluzinierte Quellen kostet das
+  Lektorat Stunden. Ich habe eine macOS-App gebaut, die diese Einträge per API gegen
+  Fachdatenbanken abgleicht — aus zwei Stunden Handarbeit wurden zehn Minuten. So
+  arbeite ich: Ich finde wiederkehrende Handarbeit in Fachabteilungen und baue
+  KI-Werkzeuge, die sie übernehmen — lokal, datensparsam und so gebaut, dass die
+  Kolleg:innen sie im Alltag auch wirklich nutzen.
+source_note: >-
+  Diese Seite und das CV-PDF werden aus einer einzigen Datenquelle erzeugt — ein
+  Single-Source-Publishing-Setup, das öffentlich einsehbar läuft.
+source_repo: "https://github.com/ecklex/personal-webpage"
 
 sections:
   - title: Über mich
     text: >-
       Mein Weg verläuft quer: von der Germanistik über korpuslinguistische Forschung
-      mit der Twitter-API ins Verlagslektorat, von dort zu bspw. XML und redaktioneller
+      mit der Twitter-API ins Verlagslektorat, von dort zu XML und redaktioneller
       Automatisierung und schließlich zum Bau eigener KI-Werkzeuge. Was wie Umwege
       aussieht, ist mein Muster: Ich arbeite mich schnell in fremde Felder ein und
-      verbinde sie. Ein KI-gestütztes Word-Add-In, eine macOS-App zur Literaturprüfung,
-      ein lokaler RAG-Bot sind entstanden, weil ich ein redaktionelles Problem technisch
-      lösen wollte.
+      verbinde sie. Ein KI-gestütztes Word-Add-in, eine macOS-App zur Literaturprüfung
+      und ein lokaler RAG-Bot sind entstanden, weil ich ein Fachproblem technisch
+      lösen wollte. Und ich baue solche Werkzeuge nicht nur — ich führe sie im Team ein,
+      damit sie im Arbeitsalltag ankommen statt im Prototyp-Stadium zu bleiben.
 
   - title: "Ausgewählte Projekte"
     type: cards
     cards:
       - role: "Literaturprüfer"
-        description: >-
-          macOS-App, die halluzinierte und fehlerhafte Einträge in Literaturverzeichnissen
-          automatisch erkennt und herausfiltert – ein Prüfschritt, der im Lektorat sonst
-          viel Handarbeit kostet, in einem Bruchteil der Zeit. Gleicht die Einträge über
-          einen Langdock-Agenten per API mit Datenbanken ab.
+        problem: >-
+          Halluzinierte oder falsch zitierte Quellen in Literaturverzeichnissen
+          aufzuspüren kostet im Lektorat Stunden Handarbeit.
+        solution: >-
+          macOS-App, die jeden Eintrag über einen Langdock-Agenten per API gegen
+          Fachdatenbanken abgleicht und fehlerhafte oder erfundene Titel automatisch
+          markiert.
+        result: >-
+          Aus rund zwei Stunden Prüfung wurden etwa zehn Minuten. Im Team eingeführt
+          und von drei Kolleg:innen genutzt.
         video: "assets/video/literaturpruefer-demo.mp4"
         video_alt: "Bildschirmaufnahme: Demo der macOS-App Literaturprüfer beim Abgleich von Literaturverzeichnissen"
+        video_desc: >-
+          Die Aufnahme zeigt, wie die App ein Literaturverzeichnis einliest, die Einträge
+          per API abgleicht und fehlerhafte Quellen automatisch markiert.
       - role: "AIdit"
-        description: >-
-          Word-Add-In, das Text mittels lokaler KI (Ollama) korrigiert.
+        problem: >-
+          Wiederkehrende Textkorrekturen binden Zeit im Lektorat — und Cloud-KI ist bei
+          unveröffentlichten Manuskripten keine Option.
+        solution: >-
+          Word-Add-in (Office.js), das Texte satzweise mit einem lokalen Sprachmodell
+          über Ollama prüft und Verbesserungen als Kommentare einfügt, statt den Text
+          automatisch zu ändern.
+        result: >-
+          Die Daten bleiben vollständig auf dem Rechner; die Autor:innen behalten die
+          Kontrolle über jede einzelne Änderung.
+        stack: "JavaScript, Office.js, Webpack; lokale LLMs über Ollama (z. B. qwen2.5)"
         links:
-          - label: "LinkedIn-Post"
+          - label: "LinkedIn-Post zu AIdit"
             url: "https://www.linkedin.com/posts/alexander-eckerlin_lektorat-ki-textkorrektur-activity-7421454350364962816--U7K?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADVfgx8B6aVdfWPLdwYjkgMZcP-ib2FC3os"
-          - label: "GitHub Repo"
+          - label: "AIdit auf GitHub"
             url: "https://github.com/ecklex/AIdit"
         video: "assets/video/aidit-demo.mp4"
-        video_alt: "Bildschirmaufnahme: Demo des Word-Add-Ins AIdit bei der KI-gestützten Textkorrektur"
+        video_alt: "Bildschirmaufnahme: Demo des Word-Add-ins AIdit bei der KI-gestützten Textkorrektur"
+        video_desc: >-
+          Die Aufnahme zeigt, wie das Add-in einen Word-Text absatzweise prüft und
+          Korrekturvorschläge als Kommentare einfügt, ohne den Originaltext zu verändern.
       - role: "RAG-Bot for PDFs"
-        description: >-
-          Kleiner lokaler RAG-Bot, der Fragen zu PDF-Dokumenten beantworten kann.
+        problem: >-
+          Antworten in umfangreichen PDF-Sammlungen zu finden ist mühsam — und die
+          Dokumente sollen das Haus nicht verlassen.
+        solution: >-
+          Lokaler RAG-Bot, der Text aus PDFs extrahiert, in Embeddings überführt, mit
+          FAISS durchsuchbar macht und Fragen über ein lokales LLM beantwortet.
+        result: >-
+          Beantwortet Fragen zu mehreren PDFs mit Belegstellen — vollständig offline,
+          wahlweise per Weboberfläche oder Konsole.
+        stack: "Python, PyMuPDF, SentenceTransformers, FAISS, Ollama (Mistral/Nous-Hermes), Gradio"
         links:
-          - label: GitHub Repo
+          - label: "RAG-Bot for PDFs auf GitHub"
             url: "https://github.com/ecklex/RAG-Bot-for-PDFs"
+      - role: "autodocx (Single-Source-Publishing, prototypisch)"
+        problem: >-
+          Print- und Digitalfassungen aus einer Quelle erzeugen, ohne Inhalte doppelt
+          pflegen zu müssen.
+        solution: >-
+          Prototyp einer Single-Source-Publishing-Pipeline auf Basis von XML/XSLT, die
+          aus einer strukturierten Quelle mehrere Ausgabeformate erzeugt.
+        result: >-
+          Funktionsfähig aufgebaut, aber nicht produktiv ausgerollt — Grundlage für eine
+          überarbeitete Pipeline, an der ich weiterarbeite.
+        stack: "XML, XSLT, Python"
+        links:
+          - label: "autodocx auf GitHub"
+            url: "https://github.com/ecklex/autodocx"
 
   - title: Berufserfahrung
     type: cards
@@ -58,16 +107,18 @@ sections:
         organization: "Carl-Auer Systeme Verlag GmbH, Heidelberg"
         date: "November 2021 – heute"
         description: >-
-          Fachliche Koordination eines Programms von rund 150 Titeln seit 2021 im Team –
-          von der konzeptionellen, sprachlichen und strukturellen Aufbereitung komplexer
+          Fachliche Koordination eines Programms von rund 180 Titeln im Team – von der
+          konzeptionellen, sprachlichen und strukturellen Aufbereitung komplexer
           Fachinhalte (Wissenschaft, Beratung, Organisation) bis zur zielgruppengerechten
-          Wissensvermittlung. Strukturierte Inhalte, Arbeit an medienneutraler Produktion
-          (XML/Single-Source-Publishing) für Print und Digital; Prozessoptimierung und
-          Aufbau einer automatisierten Single-Source-Publishing-Pipeline. Digitale
-          Barrierefreiheit nach BFSG. KI-gestützte Redaktionsarbeit (LLM, RAG, lokale
-          Sprachmodelle, Prompt Engineering) für Qualität und Effizienz. Crossfunktionale
-          Zusammenarbeit mit Redaktion, Herstellung, Design und IT sowie
-          Stakeholder-Abstimmung.
+          Wissensvermittlung. Verantwortung für digitale Barrierefreiheit: das Programm
+          vor der gesetzlichen Frist auf BFSG-Konformität umgestellt. KI-gestützte
+          Redaktionsarbeit (LLM, RAG, lokale Sprachmodelle, Prompt Engineering) für
+          Qualität und Effizienz; eine selbst entwickelte macOS-App zur Prüfung von
+          Literaturverzeichnissen im Team eingeführt (Nutzung durch drei Kolleg:innen).
+          Medienneutrale Produktion und ePub; Single-Source-Publishing-Pipelines
+          (XML/XSLT, Markdown) prototypisch aufgebaut — funktionsfähig, aber nicht
+          produktiv ausgerollt. Crossfunktionale Zusammenarbeit mit Redaktion,
+          Herstellung, Design und IT sowie Stakeholder-Abstimmung.
       - role: "Wissenschaftlicher Mitarbeiter"
         organization: "Ruprecht-Karls-Universität Heidelberg"
         date: "März 2021 – Oktober 2021"
@@ -90,25 +141,25 @@ sections:
   - title: "Fortbildungen und Seminare"
     type: cards
     cards:
-      - role: "Systemische Organisationsberatung (Grundkurs, simon weber friends)"
-      - role: "NLP-Practitioner"
       - role: "AI Literacy: KI-Kompetenz für Medien"
       - role: "XML-Grundlagen"
       - role: "UX Strategy Fundamentals"
+      - role: "Systemische Organisationsberatung (Grundkurs, simon weber friends)"
+      - role: "NLP-Practitioner"
 
   - title: "Kenntnisse & Kompetenzen"
     type: cards
     cards:
-      - role: "KI-gestützte Redaktion: LLM, RAG, Prompt Engineering, lokale Sprachmodelle (Ollama)"
-      - role: "Strukturierte Inhalte: XML, XSLT, Single-Source-Publishing"
-      - role: "Digitale Barrierefreiheit (BFSG)"
+      - role: "KI-Werkzeuge bauen & einführen: lokale LLMs (Ollama), RAG, Prompt Engineering"
+      - role: "Prozessautomatisierung redaktioneller und dokumentenbasierter Abläufe"
+      - role: "Office-/Word-Add-ins (Office.js), Python-Tooling"
+      - role: "Digitale Barrierefreiheit (BFSG, WCAG)"
       - role: "Wissensmanagement & Wissensvermittlung"
+      - role: "Team- & Stakeholder-Koordination, crossfunktionale Zusammenarbeit"
       - role: "Verlagsmanagement & redaktionelle Koordination"
-      - role: "Team- & Stakeholder-Koordination"
-      - role: "Schnittstelle zwischen Redaktion und Technik"
       - role: "Digitale Medien & Content-Strategie"
       - role: "Projektmanagement"
-      - role: "Organisationsberatung"
+      - role: "Erprobt / prototypisch: XML, XSLT, Single-Source-Publishing (aufgebaut, nicht produktiv ausgerollt)"
 
   - title: Sprachen
     type: cards
@@ -116,7 +167,7 @@ sections:
       - role: "Deutsch"
         organization: "Muttersprache"
       - role: "Englisch"
-        organization: "Sehr gut (C1)"
+        organization: "Verhandlungssicher (C1)"
       - role: "Spanisch"
         organization: "Grundkenntnisse"
 
