@@ -57,6 +57,26 @@ wurde und mit welchem Ergebnis. Letztes Audit: Juli 2026.
 - **Video-Poster:** Aktuell `preload="metadata"` (erstes Frame als Vorschau); ein
   dediziertes Poster kann über das `video_poster`-Feld pro Karte ergänzt werden.
 
+## CV-PDF (getaggtes PDF/UA-1)
+
+Auch das herunterladbare CV-PDF ist barrierefrei. Es wird **nicht** mit LaTeX erzeugt
+(das liefert nur untagged PDFs), sondern aus derselben `content.yml` über semantisches
+HTML mit **WeasyPrint** als **PDF/UA-1** gerendert. Verifizierte Merkmale:
+
+| Merkmal | Status |
+|---|---|
+| Getaggt (`/MarkInfo /Marked true`) | ✅ |
+| Logischer Strukturbaum (`/StructTreeRoot`) | ✅ H1 / H2 / H3 / P / Listen (L·LI·Lbl·LBody) / Figure / Link |
+| Dokumentsprache (`/Lang = de`) | ✅ |
+| Titel im Viewer (`DisplayDocTitle`) | ✅ |
+| Alt-Text fürs Profilfoto (`/Alt`) | ✅ |
+| PDF/UA-Kennung (XMP `pdfuaid`) | ✅ |
+| Metadaten (Titel, Autor) | ✅ |
+
+Der CI-Build erzeugt das PDF und prüft mit `scripts/verify_pdf_a11y.py`, dass Tags,
+Strukturbaum und Sprache vorhanden sind — andernfalls **bricht der Build ab**. Für eine
+formale Konformitätsprüfung eignet sich zusätzlich **veraPDF** (PDF/UA-Validator).
+
 ## Prüfung wiederholen
 
 Nach Änderungen an Layout oder Farben:
