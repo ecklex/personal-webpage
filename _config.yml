@@ -2,10 +2,9 @@
 title: Alexander Eckerlin
 tagline: "KI-Werkzeuge bauen und einführen"  # kurzer Titel-Suffix (hält den <title>-Tag knapp)
 description: "Ich entwickle KI-Werkzeuge für Fachabteilungen und führe sie ein — lokale LLMs, RAG, Prozessautomatisierung, digitale Barrierefreiheit."
-# author als Mapping (nicht als String), sonst deutet jekyll-seo-tag den Namen
-# als Twitter-Handle und erzeugt ein kaputtes twitter:creator "@Alexander Eckerlin".
-author:
-  name: Alexander Eckerlin
+# Kein `author:` hier: jekyll-seo-tag leitet daraus sonst ein kaputtes
+# twitter:creator "@Alexander Eckerlin" ab. Der Autor wird stattdessen sauber
+# über _includes/head-custom.html gesetzt.
 lang: de
 baseurl: "/personal-webpage"  # Subpfad für GitHub Pages Projektseite
 url: "https://ecklex.github.io"  # dein GitHub Pages URL
@@ -17,6 +16,6 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
 
-# Größere Vorschaukarte beim Teilen (statt kleiner Thumbnail)
-twitter:
-  card: summary_large_image
+# Kein `twitter:`-Block hier: sonst erzeugt jekyll-seo-tag ein leeres
+# twitter:site "@". Die große Bildkarte wird über head-custom.html gesetzt,
+# das Bild liefert Open Graph (og:image).
