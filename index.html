@@ -59,7 +59,7 @@ image: /assets/images/profile.jpg
     {% if site.data.content.seeking %}
     <p class="seeking">Ich suche Rollen in: <strong>{{ site.data.content.seeking }}</strong></p>
     {% endif %}
-    <p>{{ site.data.content.intro }}</p>
+    <div class="intro">{{ site.data.content.intro | markdownify }}</div>
   </div>
   <div class="profile-photo-wrapper">
     <img class="profile-photo" src="{{ 'assets/images/profile.jpg' | relative_url }}" alt="Profilfoto Alexander Eckerlin">

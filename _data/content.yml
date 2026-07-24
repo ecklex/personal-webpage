@@ -6,14 +6,14 @@ seeking: "AI Enablement · Interne KI-Werkzeuge · Prozessautomatisierung"
 email: "a.eckerlin@gmx.de"
 linkedin: "alexander-eckerlin"
 github: "ecklex"
-intro: >-
+intro: |-
   Die Prüfung von Literaturverzeichnissen auf halluzinierte Quellen kostet das Lektorat Stunden. Ich habe eine macOS-App gebaut, die diese Einträge per API gegen Fachdatenbanken abgleicht: Aus 2 Stunden Handarbeit wurden 10 Minuten. Als Verantwortlicher für digitale Barrierefreiheit habe ich das laufende Programm auf BFSG-Konformität umgestellt – vor der gesetzlichen Frist.
 
-Als Senior Managing Editor habe ich bisher ein Fachprogramm von rund 180 Titeln produziert. In dieser Zeit habe ich mit Markdown-Publishing-Pipelines experimentiert und mehrere KI-Werkzeuge für die Redaktion entwickelt – ein Word-Add-In zur Textkorrektur mit lokalem Sprachmodell, ein RAG-System für Dokumentenrecherche, die genannte Literaturprüfer-App.
+  Als Senior Managing Editor habe ich bisher ein Fachprogramm von rund 180 Titeln produziert. In dieser Zeit habe ich mit Markdown-Publishing-Pipelines experimentiert und mehrere KI-Werkzeuge für die Redaktion entwickelt – ein Word-Add-In zur Textkorrektur mit lokalem Sprachmodell, ein RAG-System für Dokumentenrecherche, die genannte Literaturprüfer-App.
 
-Mein Weg verläuft quer: Germanistik, korpuslinguistische Forschung mit der Twitter-API, Verlagslektorat, KI-gestützte Anwendungsentwicklung und redaktionelle Automatisierung, eigene KI-Tools. Was wie Umwege aussieht, ist die Methode – ich arbeite mich schnell in fremde Felder ein und verbinde sie, stelle Kreuzbezüge her.
+  Mein Weg verläuft quer: Germanistik, korpuslinguistische Forschung mit der Twitter-API, Verlagslektorat, KI-gestützte Anwendungsentwicklung und redaktionelle Automatisierung, eigene KI-Tools. Was wie Umwege aussieht, ist die Methode – ich arbeite mich schnell in fremde Felder ein und verbinde sie, stelle Kreuzbezüge her.
 
-Schwerpunkte: Content Operations · Digitale Barrierefreiheit (BFSG, WCAG) · KI-gestützte Redaktion (LLM, RAG, Prompt Engineering, lokale Modelle) · Wissensvermittlung für Fachzielgruppen
+  Schwerpunkte: Content Operations · Digitale Barrierefreiheit (BFSG, WCAG) · KI-gestützte Redaktion (LLM, RAG, Prompt Engineering, lokale Modelle) · Wissensvermittlung für Fachzielgruppen
 source_note: >-
   Diese Seite und das CV-PDF werden aus einer einzigen Datenquelle erzeugt — ein
   Single-Source-Publishing-Setup, das öffentlich einsehbar läuft.
