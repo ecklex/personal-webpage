@@ -20,17 +20,6 @@ source_note: >-
 source_repo: "https://github.com/ecklex/personal-webpage"
 
 sections:
-  - title: Über mich
-    text: >-
-      Mein Weg verläuft quer: von der Germanistik über korpuslinguistische Forschung
-      mit der Twitter-API ins Verlagslektorat, von dort zu XML und redaktioneller
-      Automatisierung und schließlich zum Bau eigener KI-Werkzeuge. Was wie Umwege
-      aussieht, ist mein Muster: Ich arbeite mich schnell in fremde Felder ein und
-      verbinde sie. Ein KI-gestütztes Word-Add-in, eine macOS-App zur Literaturprüfung
-      und ein lokaler RAG-Bot sind entstanden, weil ich ein Fachproblem technisch
-      lösen wollte. Und ich baue solche Werkzeuge nicht nur — ich führe sie im Team ein,
-      damit sie im Arbeitsalltag ankommen statt im Prototyp-Stadium zu bleiben.
-
   - title: "Ausgewählte Projekte"
     type: cards
     cards:
