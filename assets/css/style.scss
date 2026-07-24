@@ -36,8 +36,12 @@
   flex-direction: column;
 }
 
-.card-role {
+// card-role ist ein <h3>: Heading-Abstände zuruecksetzen, hoehere Spezifitaet
+// als .main-content h3, damit die dunkle Textfarbe gewinnt.
+.card .card-role {
+  margin: 0;
   font-size: 1rem;
+  font-weight: 600;
   color: #24292e;
 }
 
@@ -129,6 +133,30 @@ textarea:focus-visible,
 video:focus-visible {
   outline: 3px solid #0b5c5c;
   outline-offset: 2px;
+}
+
+// Ueberschriftenfarbe: Cayman-Gruen #159957 erreicht nur 3,67:1 (besteht nur als
+// Grosstext). Dunkleres Gruen #0b6b3a = 6,6:1 -> robust auf jeder Ueberschriftenebene (WCAG 1.4.3).
+.main-content h1,
+.main-content h2,
+.main-content h3 {
+  color: #0b6b3a;
+}
+
+// Skip-Link im Fokus: Cayman rendert blauen Text auf orangem Grund (2,21:1).
+// Dunkler Text auf Orange = 8,5:1 (WCAG 1.4.3).
+#skip-to-content:focus {
+  color: #24292e;
+}
+
+// Subtitle ist kein Abschnitt, sondern eine Tagline: als <p> ausgezeichnet,
+// aber optisch prominent. Dunkler Text (#24292e = 12,6:1).
+.subtitle {
+  margin: 0.25rem 0 0;
+  font-size: 1.35rem;
+  line-height: 1.35;
+  font-weight: 600;
+  color: #24292e;
 }
 
 .location {
