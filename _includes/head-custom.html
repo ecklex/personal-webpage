@@ -1,9 +1,7 @@
 <!-- Eigene head-Ergaenzungen. Wird vom Layout nach dem SEO-Tag eingebunden. -->
 
 <!-- Autor sauber setzen (nicht ueber _config, weil jekyll-seo-tag daraus sonst
-     ein kaputtes twitter:creator ableitet). -->
+     ein kaputtes twitter:creator ableitet). Die grosse Bildvorschau
+     (twitter:card=summary_large_image) liefert jekyll-seo-tag bereits selbst,
+     weil die Seite ein og:image hat -- daher hier NICHT nochmal setzen. -->
 <meta name="author" content="{{ site.data.content.name }}">
-
-<!-- Grosse Bildvorschau beim Teilen. Ohne twitter:site/twitter:creator, weil
-     kein X-Konto existiert; das Vorschaubild liefert og:image. -->
-<meta name="twitter:card" content="summary_large_image">
