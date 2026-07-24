@@ -72,7 +72,17 @@ def generate(content):
                 role = escape(card.get('role', ''))
                 org  = escape(card.get('organization', ''))
                 date = escape(card.get('date', ''))
-                desc = escape(card.get('description', ''))
+
+                # Beschreibung zusammensetzen: entweder freie "description" oder die
+                # strukturierten Projektfelder Problem/Lösung/Ergebnis/Stack.
+                desc_parts = []
+                if card.get('description'):
+                    desc_parts.append(escape(card['description']))
+                for key, label in (('problem', 'Problem'), ('solution', 'Lösung'),
+                                   ('result', 'Ergebnis'), ('stack', 'Stack')):
+                    if card.get(key):
+                        desc_parts.append(f'\\textbf{{{label}:}} {escape(card[key])}')
+                desc = ' '.join(desc_parts)
 
                 if date:
                     lines.append(f'\\cventry{{{date}}}{{{role}}}{{{org}}}{{}}{{}}{{\\small {desc}}}')

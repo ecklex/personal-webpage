@@ -40,7 +40,7 @@ image: /assets/images/profile.jpg
   "hasOccupation": {
     "@type": "Occupation",
     "name": "Senior Managing Editor",
-    "occupationalCategory": "Redaktion, Publishing & Content",
+    "occupationalCategory": "KI-Enablement, Automatisierung & Content",
     "description": {{ site.data.content.subtitle | jsonify }}
   }
 }
@@ -89,6 +89,18 @@ image: /assets/images/profile.jpg
       {% if card.description %}
       <p class="card-description">{{ card.description }}</p>
       {% endif %}
+      {% if card.problem %}
+      <p class="card-field"><span class="card-label">Problem:</span> {{ card.problem }}</p>
+      {% endif %}
+      {% if card.solution %}
+      <p class="card-field"><span class="card-label">Lösung:</span> {{ card.solution }}</p>
+      {% endif %}
+      {% if card.result %}
+      <p class="card-field"><span class="card-label">Ergebnis:</span> {{ card.result }}</p>
+      {% endif %}
+      {% if card.stack %}
+      <p class="card-field card-stack"><span class="card-label">Stack:</span> {{ card.stack }}</p>
+      {% endif %}
       {% if card.links %}
       <div class="card-links">
       {% for link in card.links %}
@@ -97,15 +109,23 @@ image: /assets/images/profile.jpg
       </div>
       {% endif %}
       {% if card.video %}
-      <video controls width="60%" class="card-video" aria-label="{{ card.video_alt | default: card.role | append: ' – Demo-Video' }}">
-        <source src="{{ card.video | relative_url }}" type="video/mp4">
-        <a href="{{ card.video | relative_url }}">Video herunterladen</a>
-      </video>
+      <figure class="card-video-figure">
+        <video controls preload="metadata" class="card-video"{% if card.video_poster %} poster="{{ card.video_poster | relative_url }}"{% endif %} aria-label="{{ card.video_alt | default: card.role | append: ' – Demo-Video' }}">
+          <source src="{{ card.video | relative_url }}" type="video/mp4">
+          <a href="{{ card.video | relative_url }}">Video herunterladen</a>
+        </video>
+        {% if card.video_desc %}
+        <figcaption class="card-video-desc">{{ card.video_desc }}</figcaption>
+        {% endif %}
+      </figure>
       {% endif %}
     </div>
   </div>
 {% endfor %}
 </div>
+{% if section.title == "Ausgewählte Projekte" and site.data.content.source_note %}
+<p class="source-note">{{ site.data.content.source_note }} <a href="{{ site.data.content.source_repo }}" target="_blank" rel="noopener">Quellcode auf GitHub ansehen</a>.</p>
+{% endif %}
 {% endif %}
 {% if section.items %}
 <ul>
