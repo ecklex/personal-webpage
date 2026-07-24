@@ -14,14 +14,14 @@ Gemfile.lock
 # macOS
 .DS_Store
 
-# LaTeX build artifacts
-cv.tex
-cv.aux
-cv.log
-cv.out
-cv.fls
-cv.fdb_latexmk
-cv.xdv
+# PDF build artifact (Root); die veroeffentlichte Fassung liegt unter assets/
+cv.pdf
+
+# Python
+__pycache__/
+*.pyc
+scripts/wpenv/
+.venv/
 
 # Editor directories and files
 .idea/

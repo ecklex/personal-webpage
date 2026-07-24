@@ -1,121 +1,200 @@
-import yaml
-import re
+#!/usr/bin/env python3
+"""Erzeugt das CV-PDF aus _data/content.yml — als getaggtes PDF/UA-1.
+
+Frueher lief die Erzeugung ueber LaTeX (moderncv/XeLaTeX). LaTeX produziert
+aber untagged PDFs (keine Struktur, keine Lesereihenfolge, kein /Lang) und ist
+damit nicht barrierefrei. Dieser Weg baut stattdessen semantisches HTML aus
+derselben Datenquelle und rendert es mit WeasyPrint zu einem getaggten,
+sprachlich ausgezeichneten PDF/UA-1-Dokument.
+"""
+
+import html
 import os
 
-def escape(text):
-    if not text:
-        return ""
-    def replace(m):
-        return {
-            '\\': r'\textbackslash{}',
-            '{': r'\{', '}': r'\}',
-            '&': r'\&', '%': r'\%',
-            '$': r'\$', '#': r'\#',
-            '_': r'\_', '^': r'\^{}',
-            '~': r'\textasciitilde{}',
-        }[m.group(0)]
-    return re.sub(r'[\\{}&%$#_^~]', replace, str(text))
+import yaml
+from weasyprint import HTML
 
-def escape_url(url):
-    # In URLs müssen % und # maskiert werden; Backslashes gibt es dort nicht.
-    if not url:
-        return ""
-    return str(url).replace('\\', r'\\').replace('%', r'\%').replace('#', r'\#')
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+PHOTO = "assets/images/profile.jpg"
 
-def generate(content):
-    parts = content['name'].split(' ', 1)
-    first = escape(parts[0])
-    last  = escape(parts[1] if len(parts) > 1 else '')
 
-    lines = [
-        r'\documentclass[11pt,a4paper]{moderncv}',
-        r'\moderncvstyle{classic}',
-        r'\moderncvcolor{blue}',
-        r'\usepackage[ngerman]{babel}',
-        r'\usepackage[scale=0.80]{geometry}',
-        r'\usepackage{FiraSans}',
-        r'\renewcommand{\sectionfont}{\sffamily\Large\bfseries}',
-        r'\renewcommand{\namefont}{\sffamily\Huge\bfseries}',
-        '',
-        f'\\name{{{first}}}{{{last}}}',
-        f'\\title{{{escape(content.get("subtitle", ""))}}}',
-        f'\\address{{{escape(content.get("location", ""))}}}{{}}{{}}',
-    ]
+def esc(text):
+    return html.escape(str(text)) if text else ""
 
-    if content.get('email'):
-        lines.append(f'\\email{{{escape(content["email"])}}}')
-    if content.get('linkedin'):
-        lines.append(f'\\social[linkedin]{{{escape(content["linkedin"])}}}')
-    if content.get('github'):
-        lines.append(f'\\social[github]{{{escape(content["github"])}}}')
 
-    lines += [
-        r'\photo[96pt][0.4pt]{assets/images/profile}',
-        '',
-        r'\begin{document}',
-        r'\makecvtitle',
-        '',
-    ]
+def link(url, label):
+    return f'<a href="{esc(url)}">{esc(label)}</a>'
 
-    for section in content.get('sections', []):
-        if section.get('form_endpoint'):
-            continue
 
-        lines.append(f'\\section{{{escape(section.get("title", ""))}}}')
+def render_card(card):
+    """Eine Karte als <article>. Deckt Projekte (Problem/Loesung/...),
+    Erfahrungs-/Ausbildungseintraege (role/org/date/description) ab."""
+    parts = ['<article class="entry">']
+    parts.append(f'<h3>{esc(card.get("role", ""))}</h3>')
 
-        if section.get('text'):
-            lines.append(f'\\cvitem{{}}{{\\small {escape(section["text"])}}}')
-            lines.append('')
+    meta = []
+    if card.get("organization"):
+        meta.append(esc(card["organization"]))
+    if card.get("date"):
+        meta.append(esc(card["date"]))
+    if meta:
+        parts.append(f'<p class="meta">{" · ".join(meta)}</p>')
 
-        if section.get('type') == 'cards':
-            for card in section.get('cards', []):
-                role = escape(card.get('role', ''))
-                org  = escape(card.get('organization', ''))
-                date = escape(card.get('date', ''))
+    if card.get("description"):
+        parts.append(f'<p>{esc(card["description"])}</p>')
 
-                # Beschreibung zusammensetzen: entweder freie "description" oder die
-                # strukturierten Projektfelder Problem/Lösung/Ergebnis/Stack.
-                desc_parts = []
-                if card.get('description'):
-                    desc_parts.append(escape(card['description']))
-                for key, label in (('problem', 'Problem'), ('solution', 'Lösung'),
-                                   ('result', 'Ergebnis'), ('stack', 'Stack')):
-                    if card.get(key):
-                        desc_parts.append(f'\\textbf{{{label}:}} {escape(card[key])}')
-                desc = ' '.join(desc_parts)
+    for key, lbl in (("problem", "Problem"), ("solution", "Lösung"),
+                     ("result", "Ergebnis"), ("stack", "Stack")):
+        if card.get(key):
+            parts.append(f'<p><strong>{lbl}:</strong> {esc(card[key])}</p>')
 
-                if date:
-                    lines.append(f'\\cventry{{{date}}}{{{role}}}{{{org}}}{{}}{{}}{{\\small {desc}}}')
-                elif org:
-                    lines.append(f'\\cvitem{{{role}}}{{{org}}}')
-                elif desc or card.get('links'):
-                    links_str = ''
-                    if card.get('links'):
-                        hrefs = [
-                            f'\\href{{{escape_url(l.get("url", ""))}}}{{{escape(l.get("label", ""))}}}'
-                            for l in card['links']
-                        ]
-                        links_str = ' \\textbar{} '.join(hrefs)
-                    extra = f' \\textit{{({links_str})}}' if links_str else ''
-                    lines.append(f'\\cventry{{}}{{{role}}}{{}}{{}}{{}}{{\\small {desc}{extra}}}')
-                else:
-                    lines.append(f'\\cvlistitem{{{role}}}')
+    if card.get("links"):
+        hrefs = " · ".join(link(l.get("url", ""), l.get("label", "")) for l in card["links"])
+        parts.append(f'<p class="links">{hrefs}</p>')
 
-        if section.get('items'):
-            for item in section['items']:
-                lines.append(f'\\cvlistitem{{{escape(item)}}}')
+    parts.append("</article>")
+    return "\n".join(parts)
 
-        lines.append('')
 
-    lines.append(r'\end{document}')
-    return '\n'.join(lines)
+def is_list_section(cards):
+    """Reine Aufzaehlungen (nur role, evtl. org) -> als <ul> rendern."""
+    for c in cards:
+        if any(c.get(k) for k in ("date", "description", "problem", "solution",
+                                  "result", "stack", "links")):
+            return False
+    return True
 
-if __name__ == '__main__':
-    root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    with open(os.path.join(root, '_data', 'content.yml'), encoding='utf-8') as f:
+
+def render_section(section):
+    if section.get("form_endpoint"):
+        return ""  # Kontaktformular gehoert nicht ins PDF
+    out = ['<section>']
+    out.append(f'<h2>{esc(section.get("title", ""))}</h2>')
+    if section.get("text"):
+        out.append(f'<p>{esc(section["text"])}</p>')
+
+    cards = section.get("cards")
+    if cards:
+        if is_list_section(cards):
+            out.append("<ul>")
+            for c in cards:
+                role = esc(c.get("role", ""))
+                if c.get("organization"):
+                    role += f' — {esc(c["organization"])}'
+                out.append(f"<li>{role}</li>")
+            out.append("</ul>")
+        else:
+            for c in cards:
+                out.append(render_card(c))
+    out.append("</section>")
+    return "\n".join(out)
+
+
+def build_html(content):
+    name = esc(content["name"])
+    subtitle = esc(content.get("subtitle", ""))
+
+    contact = []
+    if content.get("location"):
+        contact.append(esc(content["location"]))
+    if content.get("email"):
+        contact.append(link(f'mailto:{content["email"]}', content["email"]))
+    if content.get("linkedin"):
+        contact.append(link(f'https://www.linkedin.com/in/{content["linkedin"]}', "LinkedIn"))
+    if content.get("github"):
+        contact.append(link(f'https://github.com/{content["github"]}', "GitHub"))
+    contact_line = " · ".join(contact)
+
+    # Intro als "Profil"-Abschnitt (mehrere Absaetze -> je ein <p>)
+    profil = ""
+    if content.get("intro"):
+        paras = "".join(f"<p>{esc(p.strip())}</p>"
+                        for p in content["intro"].split("\n\n") if p.strip())
+        profil = f"<section><h2>Profil</h2>{paras}</section>"
+
+    sections = "\n".join(render_section(s) for s in content.get("sections", []))
+
+    return f"""<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Lebenslauf – {name}</title>
+<meta name="author" content="{name}">
+<meta name="description" content="{subtitle}">
+<style>{CSS}</style>
+</head>
+<body>
+<header class="cv-header">
+  <img class="photo" src="{PHOTO}" alt="Profilfoto von {name}">
+  <div class="ident">
+    <h1>{name}</h1>
+    <p class="subtitle">{subtitle}</p>
+    <p class="contact">{contact_line}</p>
+  </div>
+</header>
+<main>
+{profil}
+{sections}
+</main>
+</body>
+</html>"""
+
+
+CSS = """
+@page {
+  size: A4;
+  margin: 1.6cm 1.7cm;
+}
+* { box-sizing: border-box; }
+body {
+  font-family: "Helvetica Neue", "Arial", "DejaVu Sans", sans-serif;
+  font-size: 10.5pt;
+  line-height: 1.45;
+  color: #1c1c1c;
+  margin: 0;
+}
+a { color: #0a5ca8; text-decoration: none; }
+.cv-header {
+  display: flex;
+  align-items: center;
+  gap: 1.1cm;
+  border-bottom: 2px solid #0b6b3a;
+  padding-bottom: 0.5cm;
+  margin-bottom: 0.5cm;
+}
+.photo {
+  width: 2.6cm; height: 2.6cm;
+  border-radius: 50%; object-fit: cover;
+  flex-shrink: 0;
+}
+h1 { font-size: 20pt; margin: 0; color: #0b6b3a; }
+.subtitle { font-size: 11pt; font-weight: 600; margin: 0.15cm 0 0; color: #1c1c1c; }
+.contact { font-size: 9pt; margin: 0.2cm 0 0; color: #444; }
+h2 {
+  font-size: 12.5pt; color: #0b6b3a;
+  border-bottom: 1px solid #d0d7de;
+  padding-bottom: 0.1cm; margin: 0.55cm 0 0.25cm;
+}
+h3 { font-size: 10.5pt; margin: 0.35cm 0 0.05cm; color: #1c1c1c; }
+.entry { margin-bottom: 0.25cm; }
+.entry p { margin: 0.06cm 0; }
+.meta { font-size: 9pt; color: #555; }
+.links { font-size: 9pt; }
+ul { margin: 0.1cm 0; padding-left: 0.6cm; }
+li { margin: 0.05cm 0; }
+section { page-break-inside: auto; }
+h2, h3 { break-after: avoid; }
+"""
+
+
+def main():
+    with open(os.path.join(ROOT, "_data", "content.yml"), encoding="utf-8") as f:
         content = yaml.safe_load(f)
-    tex = generate(content)
-    out = os.path.join(root, 'cv.tex')
-    with open(out, 'w', encoding='utf-8') as f:
-        f.write(tex)
-    print(f'Generated {out}')
+    doc = build_html(content)
+    out = os.path.join(ROOT, "cv.pdf")
+    HTML(string=doc, base_url=ROOT).write_pdf(out, pdf_variant="pdf/ua-1")
+    print(f"Generated {out} (PDF/UA-1, getaggt)")
+
+
+if __name__ == "__main__":
+    main()

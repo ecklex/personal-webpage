@@ -15,25 +15,24 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Install Python dependencies
-        run: pip install pyyaml
-
-      - name: Install LaTeX
+      # WeasyPrint braucht Pango/Cairo (ueber Pango als System-Bibliotheken).
+      - name: Install WeasyPrint system libraries
         run: |
           sudo apt-get update
           sudo apt-get install -y \
-            texlive-xetex \
-            texlive-latex-extra \
-            texlive-fonts-recommended \
-            texlive-fonts-extra \
-            texlive-lang-german \
-            latexmk
+            libpango-1.0-0 \
+            libpangocairo-1.0-0 \
+            libpangoft2-1.0-0 \
+            fonts-dejavu-core
 
-      - name: Generate LaTeX source
+      - name: Install Python dependencies
+        run: pip install -r scripts/requirements.txt
+
+      - name: Generate tagged PDF (PDF/UA-1)
         run: python scripts/generate_cv.py
 
-      - name: Compile PDF
-        run: latexmk -xelatex -interaction=nonstopmode cv.tex
+      - name: Verify PDF accessibility
+        run: python scripts/verify_pdf_a11y.py cv.pdf
 
       - name: Copy PDF to assets
         run: cp cv.pdf assets/cv-alexander-eckerlin.pdf
