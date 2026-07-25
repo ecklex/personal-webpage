@@ -97,18 +97,11 @@ sections:
         organization: "Carl-Auer Systeme Verlag GmbH, Heidelberg"
         date: "November 2021 – heute"
         description: >-
-          Fachliche Koordination eines Programms von rund 180 Titeln im Team – von der
-          konzeptionellen, sprachlichen und strukturellen Aufbereitung komplexer
-          Fachinhalte (Wissenschaft, Beratung, Organisation) bis zur zielgruppengerechten
-          Wissensvermittlung. Verantwortung für digitale Barrierefreiheit: das Programm
-          vor der gesetzlichen Frist auf BFSG-Konformität umgestellt. KI-gestützte
-          Redaktionsarbeit (LLM, RAG, lokale Sprachmodelle, Prompt Engineering) für
-          Qualität und Effizienz; eine selbst entwickelte macOS-App zur Prüfung von
-          Literaturverzeichnissen im Team eingeführt (Nutzung durch drei Kolleg:innen).
-          Medienneutrale Produktion und ePub; Single-Source-Publishing-Pipelines
-          (XML/XSLT, Markdown) prototypisch aufgebaut — funktionsfähig, aber nicht
-          produktiv ausgerollt. Crossfunktionale Zusammenarbeit mit Redaktion,
-          Herstellung, Design und IT sowie Stakeholder-Abstimmung.
+          • Produktion und Projektmanagement von bisher rund 180 Titeln aus Wissenschaft, Beratung und Organisationsentwicklung inkl. ePub-Produktion.
+          • Produktion auf barrierefreie digitale Ausgaben nach BFSG umgestellt.
+          • KI-Werkzeuge für die Redaktion selbst entwickelt und im Team eingeführt: App zur automatisierten Prüfung von Literaturverzeichnissen. Nutzung durch 3 Kolleg:innen. Zwei weitere Werkzeuge entwickelt: ein Word-Add-In zur Textkorrektur und einen lokalen RAG-Bot für PDF-Recherche (Ollama).
+          • Redaktionelle Workflows für Print und Digital neu erarbeitet.
+          • Crossfunktionale Steuerung zwischen Redaktion, Herstellung, Design, IT und externen Autor:innen.
       - role: "Wissenschaftlicher Mitarbeiter"
         organization: "Ruprecht-Karls-Universität Heidelberg"
         date: "März 2021 – Oktober 2021"
