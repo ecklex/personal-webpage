@@ -7,13 +7,13 @@ email: "a.eckerlin@gmx.de"
 linkedin: "alexander-eckerlin"
 github: "ecklex"
 intro: |-
-  Die Prüfung von Literaturverzeichnissen auf halluzinierte Quellen kostet das Lektorat Stunden. Ich habe eine macOS-App gebaut, die diese Einträge per API gegen Fachdatenbanken abgleicht: Aus 2 Stunden Handarbeit wurden 10 Minuten. Als Verantwortlicher für digitale Barrierefreiheit habe ich das laufende Programm auf BFSG-Konformität umgestellt – vor der gesetzlichen Frist.
+  Halluzinierte Literaturverzeichnisse kosten Journals und Verlage Stunden der Prüfung. Ich habe eine App gebaut, die diese Einträge per API gegen Fachdatenbanken abgleicht: Aus 2 Stunden Handarbeit werden 10 Minuten zurücklehnen.
 
-  Als Senior Managing Editor habe ich bisher ein Fachprogramm von rund 180 Titeln produziert. In dieser Zeit habe ich mit Markdown-Publishing-Pipelines experimentiert und mehrere KI-Werkzeuge für die Redaktion entwickelt – ein Word-Add-In zur Textkorrektur mit lokalem Sprachmodell, ein RAG-System für Dokumentenrecherche, die genannte Literaturprüfer-App.
+  Als Verantwortlicher für digitale Barrierefreiheit habe ich unser laufendes Programm auf BFSG-Konformität umgestellt – vor der gesetzlichen Frist.
 
-  Mein Weg verläuft quer: Germanistik, korpuslinguistische Forschung mit der Twitter-API, Verlagslektorat, KI-gestützte Anwendungsentwicklung und redaktionelle Automatisierung, eigene KI-Tools. Was wie Umwege aussieht, ist die Methode – ich arbeite mich schnell in fremde Felder ein und verbinde sie, stelle Kreuzbezüge her.
+  Als Senior Managing Editor habe ich für dieses Fachprogramm bisher rund 180 Titeln produziert. In dieser Zeit habe ich mit Markdown-Publishing-Pipelines experimentiert und mehrere KI-Werkzeuge für die Redaktion entwickelt – ein Word-Add-In zur Textkorrektur mit lokalem Sprachmodell, ein RAG-System für Dokumentenrecherche, die genannte Literaturprüfer-App.
 
-  Schwerpunkte: Content Operations · Digitale Barrierefreiheit (BFSG, WCAG) · KI-gestützte Redaktion (LLM, RAG, Prompt Engineering, lokale Modelle) · Wissensvermittlung für Fachzielgruppen
+  Ich bin eine laufende Schnittstelle: Germanistik, korpuslinguistische Forschung mit der Twitter-API, Verlagslektorat, KI-gestützte Anwendungsentwicklung und redaktionelle Automatisierung, eigene KI-Tools. Was wie Umwege aussieht, ist meine Natur: Ich arbeite mich schnell in fremde Felder ein und verbinde sie, stelle Kreuzbezüge her. Wie könnte man X oder Y besser lösen?
 source_note: >-
   Diese Seite und das CV-PDF werden aus einer einzigen Datenquelle erzeugt — ein
   Single-Source-Publishing-Setup, das öffentlich einsehbar läuft.
