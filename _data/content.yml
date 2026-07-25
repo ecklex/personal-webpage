@@ -140,7 +140,7 @@ sections:
   - title: "Kenntnisse & Kompetenzen"
     type: cards
     cards:
-      - role: "KI-Werkzeuge bauen & einführen: lokale LLMs (Ollama), RAG, Prompt Engineering"
+      - role: "KI-Werkzeuge bauen & einführen: lokale LLMs (Ollama), RAG, Prompt Engineering, KI Prompting"
       - role: "Prozessautomatisierung redaktioneller und dokumentenbasierter Abläufe"
       - role: "Office-/Word-Add-ins (Office.js), Python-Tooling"
       - role: "Digitale Barrierefreiheit (BFSG, WCAG)"
