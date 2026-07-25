@@ -1,5 +1,5 @@
 name: Alexander Eckerlin
-subtitle: "KI-Werkzeuge für Fachabteilungen bauen und einführen | Lokale LLMs · RAG · Automatisierung · Prompt-Qualität & Halluzinationsprüfung | Senior Managing Editor"
+subtitle: "AI Enablement, interne KI-Tools, Automatisierung | Senior Managing Editor"
 location: "Metropolregion Rhein-Neckar"
 availability: "Offen für neue Herausforderungen"
 seeking: "AI Enablement · Interne KI-Werkzeuge · Prozessautomatisierung"
@@ -7,13 +7,13 @@ email: "a.eckerlin@gmx.de"
 linkedin: "alexander-eckerlin"
 github: "ecklex"
 intro: |-
-  Halluzinierte Literaturverzeichnisse kosten Journals und Verlage Stunden der Prüfung. Ich habe eine App gebaut, die diese Einträge per API gegen Fachdatenbanken abgleicht: Aus 2 Stunden Handarbeit werden 10 Minuten zurücklehnen.
+  Halluzinierte Literaturverzeichnisse kosten Journals und Verlage Stunden der Prüfung. Ich habe eine App gebaut, die diese Einträge per API gegen Fachdatenbanken abgleicht: Aus 2 Stunden Handarbeit werden zehn Minuten.
 
   Als Verantwortlicher für digitale Barrierefreiheit habe ich unser laufendes Programm auf BFSG-Konformität umgestellt – vor der gesetzlichen Frist.
 
   Als Senior Managing Editor habe ich für dieses Fachprogramm bisher rund 180 Titeln produziert. In dieser Zeit habe ich mit Markdown-Publishing-Pipelines experimentiert und mehrere KI-Werkzeuge für die Redaktion entwickelt – ein Word-Add-In zur Textkorrektur mit lokalem Sprachmodell, ein RAG-System für Dokumentenrecherche, die genannte Literaturprüfer-App.
 
-  Ich bin eine laufende Schnittstelle: Germanistik, korpuslinguistische Forschung mit der Twitter-API, Verlagslektorat, KI-gestützte Anwendungsentwicklung und redaktionelle Automatisierung, eigene KI-Tools. Was wie Umwege aussieht, ist meine Natur: Ich arbeite mich schnell in fremde Felder ein und verbinde sie, stelle Kreuzbezüge her. Wie könnte man X oder Y besser lösen?
+  Germanistik, korpuslinguistische Forschung mit der Twitter-API, Verlagslektorat, KI-gestützte Anwendungsentwicklung und redaktionelle Automatisierung, eigene KI-Tools. Was wie Umwege aussieht, ist meine Natur: Ich arbeite mich schnell in fremde Felder ein und verbinde sie, stelle Kreuzbezüge her. Wie könnte man X oder Y besser lösen?
 source_note: >-
   Diese Seite und das CV-PDF werden aus einer einzigen Datenquelle erzeugt — ein
   Single-Source-Publishing-Setup, das öffentlich einsehbar läuft.
@@ -30,7 +30,7 @@ sections:
         solution: >-
           macOS-App, die jeden Eintrag über einen Langdock-Agenten per API gegen
           Fachdatenbanken abgleicht und fehlerhafte oder erfundene Titel automatisch
-          markiert.
+          markiert (Code nicht öffentlich).
         result: >-
           Aus rund zwei Stunden Prüfung wurden etwa zehn Minuten. Im Team eingeführt
           und von drei Kolleg:innen genutzt.
@@ -152,7 +152,7 @@ sections:
       - role: "Englisch"
         organization: "Verhandlungssicher (C1)"
       - role: "Spanisch"
-        organization: "Grundkenntnisse"
+        organization: "Gute Kenntnisse"
 
   - title: Kontakt
     form_endpoint: "https://formspree.io/f/xqennrpq"
