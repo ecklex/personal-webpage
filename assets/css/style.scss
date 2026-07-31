@@ -64,6 +64,18 @@
   line-height: 1.5;
 }
 
+.card-bullets {
+  font-size: 0.9rem;
+  color: #444d56;
+  margin: 0.5rem 0 0;
+  padding-left: 1.2rem;
+  line-height: 1.5;
+
+  li + li {
+    margin-top: 0.3rem;
+  }
+}
+
 .card-field {
   font-size: 0.9rem;
   color: #444d56;

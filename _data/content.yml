@@ -96,12 +96,22 @@ sections:
       - role: "Senior Managing Editor | Lektorat und Produktion"
         organization: "Carl-Auer Systeme Verlag GmbH, Heidelberg"
         date: "November 2021 – heute"
-        description: >-
-          • Produktion und Projektmanagement von bisher rund 180 Titeln aus Wissenschaft, Beratung und Organisationsentwicklung inkl. ePub-Produktion.
-          • Produktion auf barrierefreie digitale Ausgaben nach BFSG umgestellt.
-          • KI-Werkzeuge für die Redaktion selbst entwickelt und im Team eingeführt: App zur automatisierten Prüfung von Literaturverzeichnissen. Nutzung durch 3 Kolleg:innen. Zwei weitere Werkzeuge entwickelt: ein Word-Add-In zur Textkorrektur und einen lokalen RAG-Bot für PDF-Recherche (Ollama).
-          • Redaktionelle Workflows für Print und Digital neu erarbeitet.
-          • Crossfunktionale Steuerung zwischen Redaktion, Herstellung, Design, IT und externen Autor:innen.
+        bullets:
+          - >-
+            Produktion und Projektmanagement von bisher rund 180 Titeln aus Wissenschaft,
+            Beratung und Organisationsentwicklung inkl. ePub-Produktion.
+          - >-
+            Produktion auf barrierefreie digitale Ausgaben nach BFSG umgestellt.
+          - >-
+            KI-Werkzeuge für die Redaktion selbst entwickelt und im Team eingeführt: App zur
+            automatisierten Prüfung von Literaturverzeichnissen, genutzt von 3 Kolleg:innen.
+            Zwei weitere Werkzeuge entwickelt: ein Word-Add-In zur Textkorrektur und einen
+            lokalen RAG-Bot für PDF-Recherche (Ollama).
+          - >-
+            Redaktionelle Workflows für Print und Digital neu erarbeitet.
+          - >-
+            Crossfunktionale Steuerung zwischen Redaktion, Herstellung, Design, IT und
+            externen Autor:innen.
       - role: "Wissenschaftlicher Mitarbeiter"
         organization: "Ruprecht-Karls-Universität Heidelberg"
         date: "März 2021 – Oktober 2021"

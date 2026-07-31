@@ -43,6 +43,10 @@ def render_card(card):
     if card.get("description"):
         parts.append(f'<p>{esc(card["description"])}</p>')
 
+    if card.get("bullets"):
+        items = "".join(f"<li>{esc(b)}</li>" for b in card["bullets"])
+        parts.append(f"<ul>{items}</ul>")
+
     for key, lbl in (("problem", "Problem"), ("solution", "Lösung"),
                      ("result", "Ergebnis"), ("stack", "Stack")):
         if card.get(key):
@@ -59,8 +63,8 @@ def render_card(card):
 def is_list_section(cards):
     """Reine Aufzaehlungen (nur role, evtl. org) -> als <ul> rendern."""
     for c in cards:
-        if any(c.get(k) for k in ("date", "description", "problem", "solution",
-                                  "result", "stack", "links")):
+        if any(c.get(k) for k in ("date", "description", "bullets", "problem",
+                                  "solution", "result", "stack", "links")):
             return False
     return True
 
