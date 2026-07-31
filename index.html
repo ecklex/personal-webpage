@@ -89,6 +89,13 @@ image: /assets/images/profile.jpg
       {% if card.description %}
       <p class="card-description">{{ card.description }}</p>
       {% endif %}
+      {% if card.bullets %}
+      <ul class="card-bullets">
+      {% for bullet in card.bullets %}
+        <li>{{ bullet }}</li>
+      {% endfor %}
+      </ul>
+      {% endif %}
       {% if card.problem %}
       <p class="card-field"><span class="card-label">Problem:</span> {{ card.problem }}</p>
       {% endif %}

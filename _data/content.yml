@@ -11,7 +11,7 @@ intro: |-
 
   Als Verantwortlicher für digitale Barrierefreiheit habe ich unser laufendes Programm auf BFSG-Konformität umgestellt – vor der gesetzlichen Frist.
 
-  Als Senior Managing Editor habe ich für dieses Fachprogramm bisher rund 180 Titeln produziert. In dieser Zeit habe ich mit Markdown-Publishing-Pipelines experimentiert und mehrere KI-Werkzeuge für die Redaktion entwickelt – ein Word-Add-In zur Textkorrektur mit lokalem Sprachmodell, ein RAG-System für Dokumentenrecherche, die genannte Literaturprüfer-App.
+  Als Senior Managing Editor habe ich für dieses Fachprogramm bisher rund 180 Titel produziert. In dieser Zeit habe ich mit Markdown-Publishing-Pipelines experimentiert und mehrere KI-Werkzeuge für die Redaktion entwickelt – ein Word-Add-In zur Textkorrektur mit lokalem Sprachmodell, ein RAG-System für Dokumentenrecherche, die genannte Literaturprüfer-App.
 
   Germanistik, korpuslinguistische Forschung mit der Twitter-API, Verlagslektorat, KI-gestützte Anwendungsentwicklung und redaktionelle Automatisierung, eigene KI-Tools. Was wie Umwege aussieht, ist meine Natur: Ich arbeite mich schnell in fremde Felder ein und verbinde sie, stelle Kreuzbezüge her. Wie könnte man X oder Y besser lösen?
 source_note: >-
@@ -96,12 +96,22 @@ sections:
       - role: "Senior Managing Editor | Lektorat und Produktion"
         organization: "Carl-Auer Systeme Verlag GmbH, Heidelberg"
         date: "November 2021 – heute"
-        description: >-
-          • Produktion und Projektmanagement von bisher rund 180 Titeln aus Wissenschaft, Beratung und Organisationsentwicklung inkl. ePub-Produktion.
-          • Produktion auf barrierefreie digitale Ausgaben nach BFSG umgestellt.
-          • KI-Werkzeuge für die Redaktion selbst entwickelt und im Team eingeführt: App zur automatisierten Prüfung von Literaturverzeichnissen. Nutzung durch 3 Kolleg:innen. Zwei weitere Werkzeuge entwickelt: ein Word-Add-In zur Textkorrektur und einen lokalen RAG-Bot für PDF-Recherche (Ollama).
-          • Redaktionelle Workflows für Print und Digital neu erarbeitet.
-          • Crossfunktionale Steuerung zwischen Redaktion, Herstellung, Design, IT und externen Autor:innen.
+        bullets:
+          - >-
+            Produktion und Projektmanagement von bisher rund 180 Titeln aus Wissenschaft,
+            Beratung und Organisationsentwicklung inkl. ePub-Produktion.
+          - >-
+            Produktion auf barrierefreie digitale Ausgaben nach BFSG umgestellt.
+          - >-
+            KI-Werkzeuge für die Redaktion selbst entwickelt und im Team eingeführt: App zur
+            automatisierten Prüfung von Literaturverzeichnissen, genutzt von 3 Kolleg:innen.
+            Zwei weitere Werkzeuge entwickelt: ein Word-Add-In zur Textkorrektur und einen
+            lokalen RAG-Bot für PDF-Recherche (Ollama).
+          - >-
+            Redaktionelle Workflows für Print und Digital neu erarbeitet.
+          - >-
+            Crossfunktionale Steuerung zwischen Redaktion, Herstellung, Design, IT und
+            externen Autor:innen.
       - role: "Wissenschaftlicher Mitarbeiter"
         organization: "Ruprecht-Karls-Universität Heidelberg"
         date: "März 2021 – Oktober 2021"
