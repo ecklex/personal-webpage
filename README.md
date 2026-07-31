@@ -34,7 +34,7 @@ Alle Inhalte liegen in **`_data/content.yml`**. Aus dieser einen Datei entstehen
 
 1. die **Website** (`index.html` rendert die Sektionen),
 2. **`llms.txt`** (Klartextfassung für LLMs/KI-Recruiting),
-3. das **CV-PDF** (`scripts/generate_cv.py` → LaTeX → PDF).
+3. das **CV-PDF** (`scripts/generate_cv.py` → HTML → WeasyPrint → PDF/UA-1).
 
 Inhalt also **nur an einer Stelle** ändern: in `content.yml`. Website, llms.txt und
 PDF ziehen automatisch nach.
