@@ -30,10 +30,13 @@ sections:
         solution: >-
           macOS-App, die jeden Eintrag über einen Langdock-Agenten per API gegen
           Fachdatenbanken abgleicht und fehlerhafte oder erfundene Titel automatisch
-          markiert (Code nicht öffentlich).
+          markiert.
         result: >-
           Aus rund zwei Stunden Prüfung wurden etwa zehn Minuten. Im Team eingeführt
           und von drei Kolleg:innen genutzt.
+        links:
+          - label: "Literaturprüfer auf GitHub"
+            url: "https://github.com/ecklex/literaturpruefer"
         video: "assets/video/literaturpruefer-demo.mp4"
         video_alt: "Bildschirmaufnahme: Demo der macOS-App Literaturprüfer beim Abgleich von Literaturverzeichnissen"
         video_desc: >-
