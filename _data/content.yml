@@ -149,6 +149,7 @@ sections:
       - role: "KI-Werkzeuge bauen & einführen: lokale LLMs (Ollama), RAG, Prompt Engineering, KI Prompting"
       - role: "Prozessautomatisierung redaktioneller und dokumentenbasierter Abläufe"
       - role: "Office-/Word-Add-ins (Office.js), Python-Tooling"
+      - role: "Grundausbildung Systemische Organisationsberatung"
       - role: "Digitale Barrierefreiheit (BFSG, WCAG)"
       - role: "Wissensmanagement & Wissensvermittlung"
       - role: "Team- & Stakeholder-Koordination, crossfunktionale Zusammenarbeit"
