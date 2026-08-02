@@ -130,7 +130,7 @@ image: /assets/images/profile.jpg
   </div>
 {% endfor %}
 </div>
-{% if section.title == "Ausgewählte Projekte" and site.data.content.source_note %}
+{% if section.title contains "Ausgewählte Projekte" and site.data.content.source_note %}
 <p class="source-note">{{ site.data.content.source_note }} <a href="{{ site.data.content.source_repo }}" target="_blank" rel="noopener">Quellcode auf GitHub ansehen</a>.</p>
 {% endif %}
 {% endif %}
