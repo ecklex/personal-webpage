@@ -106,15 +106,15 @@ sections:
           - >-
             Produktion auf barrierefreie digitale Ausgaben nach BFSG umgestellt.
           - >-
+            Crossfunktionale Steuerung zwischen Stakeholdern: Redaktion, Herstellung,
+            Design, IT und externe Autor:innen.
+          - >-
             KI-Werkzeuge für die Redaktion selbst entwickelt und im Team eingeführt: App zur
             automatisierten Prüfung von Literaturverzeichnissen, genutzt von 3 Kolleg:innen.
             Zwei weitere Werkzeuge entwickelt: ein Word-Add-In zur Textkorrektur und einen
             lokalen RAG-Bot für PDF-Recherche (Ollama).
           - >-
             Redaktionelle Workflows für Print und Digital neu erarbeitet.
-          - >-
-            Crossfunktionale Steuerung zwischen Redaktion, Herstellung, Design, IT und
-            externen Autor:innen.
       - role: "Wissenschaftlicher Mitarbeiter"
         organization: "Ruprecht-Karls-Universität Heidelberg"
         date: "März 2021 – Oktober 2021"
