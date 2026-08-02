@@ -29,7 +29,10 @@ def link(url, label):
 def render_card(card):
     """Eine Karte als <article>. Deckt Projekte (Problem/Loesung/...),
     Erfahrungs-/Ausbildungseintraege (role/org/date/description) ab."""
-    parts = ['<article class="entry">']
+    # Projekte an ihren Feldern erkennen, nicht am Sektionstitel: eine
+    # Umbenennung der Sektion soll die Auszeichnung nicht stillschweigend brechen.
+    is_project = any(card.get(k) for k in ("problem", "solution", "result"))
+    parts = [f'<article class="entry{" project" if is_project else ""}">']
     parts.append(f'<h3>{esc(card.get("role", ""))}</h3>')
 
     meta = []
@@ -180,6 +183,8 @@ h2 {
   padding-bottom: 0.1cm; margin: 0.55cm 0 0.25cm;
 }
 h3 { font-size: 10.5pt; margin: 0.35cm 0 0.05cm; color: #1c1c1c; }
+/* Nur Projekttitel gruen; Stationen und Abschluesse bleiben dunkel. */
+.project h3 { color: #0b6b3a; }
 .entry { margin-bottom: 0.25cm; }
 .entry p { margin: 0.06cm 0; }
 .meta { font-size: 9pt; color: #555; }
