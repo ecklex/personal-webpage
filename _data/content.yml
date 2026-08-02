@@ -7,20 +7,20 @@ email: "a.eckerlin@gmx.de"
 linkedin: "alexander-eckerlin"
 github: "ecklex"
 intro: |-
-  Halluzinierte Literaturverzeichnisse kosten Journals und Verlage Stunden der Prüfung. Ich habe eine App gebaut, die diese Einträge per API gegen Fachdatenbanken abgleicht: Aus 2 Stunden Handarbeit werden zehn Minuten.
+  Halluzinierte Literaturverzeichnisse kosten Verlage Stunden der Prüfung. Ich habe eine App gebaut, die diese Einträge per API gegen Fachdatenbanken abgleicht: Aus 2 Stunden Handarbeit werden zehn Minuten.
 
   Als Verantwortlicher für digitale Barrierefreiheit habe ich unser laufendes Programm auf BFSG-Konformität umgestellt – vor der gesetzlichen Frist.
 
-  Als Senior Managing Editor habe ich für dieses Fachprogramm bisher rund 180 Titel produziert. In dieser Zeit habe ich mit Markdown-Publishing-Pipelines experimentiert und mehrere KI-Werkzeuge für die Redaktion entwickelt – ein Word-Add-In zur Textkorrektur mit lokalem Sprachmodell, ein RAG-System für Dokumentenrecherche, die genannte Literaturprüfer-App.
+  Als Senior Managing Editor habe ich für dieses Fachprogramm bisher rund 180 Titel produziert, mit Markdown-Publishing-Pipelines experimentiert und mehrere KI-Werkzeuge für die Redaktion entwickelt. Daran entzündet sich meine Begeisterung: Use Cases im Alltag erkennen, Lösungen entwerfen, gemeinsam anwenden. Das funktioniert in jeder Branche.
 
-  Germanistik, korpuslinguistische Forschung mit der Twitter-API, Verlagslektorat, KI-gestützte Anwendungsentwicklung und redaktionelle Automatisierung, eigene KI-Tools. Was wie Umwege aussieht, ist meine Natur: Ich arbeite mich schnell in fremde Felder ein und verbinde sie, stelle Kreuzbezüge her. Wie könnte man X oder Y besser lösen?
+  Germanistik, korpuslinguistische Forschung, Verlagslektorat, KI-gestützte Anwendungsentwicklung und redaktionelle Automatisierung, eigene KI-Tools. Was wie Umwege aussieht, ist meine Natur: Ich arbeite mich schnell in fremde Felder ein und verbinde sie, stelle Kreuzbezüge her.
 source_note: >-
   Diese Seite und das CV-PDF werden aus einer einzigen Datenquelle erzeugt — ein
   Single-Source-Publishing-Setup, das öffentlich einsehbar läuft.
 source_repo: "https://github.com/ecklex/personal-webpage"
 
 sections:
-  - title: "Ausgewählte Projekte"
+  - title: "Ausgewählte Projekte & Use Cases"
     type: cards
     cards:
       - role: "Literaturprüfer"
