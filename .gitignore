@@ -17,6 +17,10 @@ Gemfile.lock
 # PDF build artifact (Root); die veroeffentlichte Fassung liegt unter assets/
 cv.pdf
 
+# Bewerbungen: Anschreiben, Firmennamen, Absenderanschrift und erzeugte PDFs.
+# Dieses Repo ist oeffentlich — nichts davon darf hinein.
+bewerbungen/
+
 # Python
 __pycache__/
 *.pyc
