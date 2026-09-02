@@ -86,21 +86,24 @@ sections:
         links:
           - label: "RAG-Bot for PDFs auf GitHub"
             url: "https://github.com/ecklex/RAG-Bot-for-PDFs"
-      - role: "autodocx (Single-Source-Publishing, prototypisch)"
-        id: autodocx
+      - role: "Markdown-Publishing-Pipeline"
+        id: markdown-publishing-pipeline
         problem: >-
-          Print- und Digitalfassungen aus einer Quelle erzeugen, ohne Inhalte doppelt
-          pflegen zu müssen.
+          Print-Satz und barrierefreie Digitalfassung eines Buchs entstehen getrennt —
+          jede Korrektur ist damit doppelt zu pflegen.
         solution: >-
-          Prototyp einer Single-Source-Publishing-Pipeline auf Basis von XML/XSLT, die
-          aus einer strukturierten Quelle mehrere Ausgabeformate erzeugt.
+          Pipeline, die eine Word-Datei mit Standardstilen in Markdown-Kapitel zerlegt und
+          daraus ein gesetztes Buch baut: wahlweise Print-Satz über LaTeX oder
+          barrierefreies PDF/UA-1 über WeasyPrint. Bedienung über eine lokale
+          Weboberfläche oder direkt über die Skripte.
         result: >-
-          Funktionsfähig aufgebaut, aber nicht produktiv ausgerollt — Grundlage für eine
-          überarbeitete Pipeline, an der ich weiterarbeite.
-        stack: "XML, XSLT, Python"
+          Ein Manuskript, zwei Ausgabewege. Engine und Buchordner sind getrennt, ein
+          Layoutfix gilt dadurch für alle Bücher. Text ohne Word-Standardstil wird im PDF
+          farbig markiert und fällt beim Korrekturlesen sofort auf.
+        stack: "Rust, Bash, Pandoc, Lua-Filter, XeLaTeX, WeasyPrint"
         links:
-          - label: "autodocx auf GitHub"
-            url: "https://github.com/ecklex/autodocx"
+          - label: "Markdown-Publishing-Pipeline auf GitHub"
+            url: "https://github.com/ecklex/markdown-publishing-pipeline"
 
   - title: Berufserfahrung
     id: berufserfahrung
