@@ -1,0 +1,13 @@
+# Vorlage fuer die Absenderdaten im Anschreiben.
+#
+# Diese Angaben stehen bewusst nicht in _data/content.yml: die Datei ist
+# oeffentlich, die vollstaendige Anschrift soll es nicht sein.
+#
+#   cp scripts/absender.example.yml bewerbungen/absender.yml
+#
+# `bewerbungen/` steht in .gitignore — die ausgefuellte Datei verlaesst das
+# Repo nie. Name und E-Mail zieht das Skript aus content.yml.
+
+strasse: "Musterweg 1"
+ort: "69117 Heidelberg"
+telefon: "+49 170 0000000"  # optional, weglassen ist erlaubt

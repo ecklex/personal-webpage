@@ -9,6 +9,23 @@ lang: de
 baseurl: "/personal-webpage"  # Subpfad für GitHub Pages Projektseite
 url: "https://ecklex.github.io"  # dein GitHub Pages URL
 
+# `bewerbungen/` enthaelt Anschreiben und Firmennamen und gehoert nicht in den
+# Website-Build. Die Jekyll-Standardausschluesse sind mit aufgefuehrt, weil eine
+# eigene exclude-Liste sie je nach Jekyll-Version ersetzt statt ergaenzt.
+exclude:
+  - bewerbungen
+  - scripts/wpenv  # lokale Python-Umgebung (21 MB), hat im Build nichts zu suchen
+  - .sass-cache
+  - .jekyll-cache
+  - gemfiles
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
 # Theme
 remote_theme: pages-themes/cayman@v0.2.0
 plugins:

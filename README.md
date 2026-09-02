@@ -13,20 +13,20 @@ Personal website and CV for Alexander Eckerlin, built with [Jekyll](https://jeky
 ## Local Development
 
 1. Install [Ruby](https://www.ruby-lang.org/) and [Bundler](https://bundler.io/).
-2. Create a `Gemfile` (if not already present):
-   ```ruby
-   source "https://rubygems.org"
-   gem "github-pages", group: :jekyll_plugins
-   ```
-3. Install dependencies:
+   **Ruby 3.x, nicht 4.x:** das `github-pages`-Gem haengt ueber `jekyll-commonmark`
+   an `commonmarker`, das `Ruby < 4.0` verlangt — mit Ruby 4 scheitert schon die
+   Aufloesung der Abhaengigkeiten. Das System-Ruby von macOS (2.6) ist umgekehrt zu
+   alt. Getestet mit 3.4 (`brew install ruby@3.4`, dann `/usr/local/opt/ruby@3.4/bin`
+   in den PATH).
+2. Install dependencies:
    ```bash
    bundle install
    ```
-4. Serve locally:
+3. Serve locally:
    ```bash
    bundle exec jekyll serve
    ```
-5. Open `http://localhost:4000` in your browser.
+4. Open `http://localhost:4000` in your browser.
 
 ## Inhalte pflegen (Single Source of Truth)
 
@@ -59,6 +59,45 @@ sondern automatisch als **getaggtes, barrierefreies PDF/UA-1** erzeugt:
 - **Lokal testen:** `pip install -r scripts/requirements.txt && python scripts/generate_cv.py`
   erzeugt `cv.pdf` (gitignored). WeasyPrint braucht die Pango-Bibliotheken
   (macOS: `brew install pango`, Ubuntu: `libpango-1.0-0 libpangocairo-1.0-0`).
+
+## Bewerbung zusammenstellen
+
+Für eine konkrete Bewerbung ist der vollständige CV meist zu viel. Der **Bewerbungs-Builder**
+erzeugt stattdessen ein PDF aus einem individuellen Anschreiben plus genau den Einträgen, die
+zur Stelle passen — ebenfalls als getaggtes PDF/UA-1.
+
+Er ist ein **rein lokales Werkzeug und nicht Teil der Website** — er hat mit Jekyll nichts zu
+tun, sondern bringt einen eigenen kleinen Server mit (nur auf `127.0.0.1` erreichbar). Der
+Ordner `bewerbungen/` steht in `.gitignore` und in `exclude:` von `_config.yml`: Anschreiben,
+Firmennamen und die Absenderanschrift verlassen dieses (öffentliche) Repo nie.
+
+**Einmalig:** Absenderanschrift anlegen —
+`cp scripts/absender.example.yml bewerbungen/absender.yml` und ausfüllen.
+Name und E-Mail zieht das Skript aus `content.yml`.
+
+**Pro Bewerbung — ein Befehl:**
+
+```bash
+python scripts/bewerbung.py
+```
+
+Der Browser geht auf. Anschreiben schreiben, Einträge an- und abwählen, Sektionsreihenfolge
+festlegen, „PDF erzeugen“ klicken. Das PDF landet in `bewerbungen/` und öffnet sich; Strg+C
+beendet den Server.
+
+Die Auswahl wird dabei zusätzlich als YAML in `bewerbungen/` abgelegt. Am Anschreiben lässt
+sich dort im Editor weiterschreiben — neu bauen dann ohne Browser:
+
+```bash
+python scripts/generate_application.py bewerbungen/<datei>.yml
+```
+
+Prüfen wie beim CV: `python scripts/verify_pdf_a11y.py bewerbungen/<datei>.pdf`.
+
+Auswahl und Reihenfolge hängen an den `id`-Feldern in `content.yml`. Neue Einträge dort
+brauchen also eine `id`; einmal vergebene sollten stabil bleiben, sonst laufen ältere
+Bewerbungsdateien ins Leere (das Skript bricht dann mit einer Meldung ab, statt Einträge
+stillschweigend wegzulassen).
 
 ## Deployment
 

@@ -19,11 +19,17 @@ source_note: >-
   Single-Source-Publishing-Setup, das öffentlich einsehbar läuft.
 source_repo: "https://github.com/ecklex/personal-webpage"
 
+# Die `id`-Felder adressieren Sektionen und Einträge im Bewerbungs-Builder
+# (scripts/bewerbung.py, scripts/generate_application.py). Website und CV-PDF
+# lesen sie nicht; einmal vergebene ids sollten aber stabil bleiben, sonst
+# laufen bestehende Bewerbungsdateien ins Leere.
 sections:
   - title: "Ausgewählte Projekte & Use Cases"
+    id: projekte
     type: cards
     cards:
       - role: "Literaturprüfer"
+        id: literaturpruefer
         problem: >-
           Halluzinierte oder falsch zitierte Quellen in Literaturverzeichnissen
           aufzuspüren kostet im Lektorat Stunden Handarbeit.
@@ -43,6 +49,7 @@ sections:
           Die Aufnahme zeigt, wie die App ein Literaturverzeichnis einliest, die Einträge
           per API abgleicht und fehlerhafte Quellen automatisch markiert.
       - role: "AIdit"
+        id: aidit
         problem: >-
           Wiederkehrende Textkorrekturen binden Zeit im Lektorat — und Cloud-KI ist bei
           unveröffentlichten Manuskripten keine Option.
@@ -65,6 +72,7 @@ sections:
           Die Aufnahme zeigt, wie das Add-in einen Word-Text absatzweise prüft und
           Korrekturvorschläge als Kommentare einfügt, ohne den Originaltext zu verändern.
       - role: "RAG-Bot for PDFs"
+        id: rag-bot-pdfs
         problem: >-
           Antworten in umfangreichen PDF-Sammlungen zu finden ist mühsam — und die
           Dokumente sollen das Haus nicht verlassen.
@@ -78,25 +86,31 @@ sections:
         links:
           - label: "RAG-Bot for PDFs auf GitHub"
             url: "https://github.com/ecklex/RAG-Bot-for-PDFs"
-      - role: "autodocx (Single-Source-Publishing, prototypisch)"
+      - role: "Markdown-Publishing-Pipeline"
+        id: markdown-publishing-pipeline
         problem: >-
-          Print- und Digitalfassungen aus einer Quelle erzeugen, ohne Inhalte doppelt
-          pflegen zu müssen.
+          Print-Satz und barrierefreie Digitalfassung eines Buchs entstehen getrennt —
+          jede Korrektur ist damit doppelt zu pflegen.
         solution: >-
-          Prototyp einer Single-Source-Publishing-Pipeline auf Basis von XML/XSLT, die
-          aus einer strukturierten Quelle mehrere Ausgabeformate erzeugt.
+          Pipeline, die eine Word-Datei mit Standardstilen in Markdown-Kapitel zerlegt und
+          daraus ein gesetztes Buch baut: wahlweise Print-Satz über LaTeX oder
+          barrierefreies PDF/UA-1 über WeasyPrint. Bedienung über eine lokale
+          Weboberfläche oder direkt über die Skripte.
         result: >-
-          Funktionsfähig aufgebaut, aber nicht produktiv ausgerollt — Grundlage für eine
-          überarbeitete Pipeline, an der ich weiterarbeite.
-        stack: "XML, XSLT, Python"
+          Ein Manuskript, zwei Ausgabewege. Engine und Buchordner sind getrennt, ein
+          Layoutfix gilt dadurch für alle Bücher. Text ohne Word-Standardstil wird im PDF
+          farbig markiert und fällt beim Korrekturlesen sofort auf.
+        stack: "Rust, Bash, Pandoc, Lua-Filter, XeLaTeX, WeasyPrint"
         links:
-          - label: "autodocx auf GitHub"
-            url: "https://github.com/ecklex/autodocx"
+          - label: "Markdown-Publishing-Pipeline auf GitHub"
+            url: "https://github.com/ecklex/markdown-publishing-pipeline"
 
   - title: Berufserfahrung
+    id: berufserfahrung
     type: cards
     cards:
       - role: "Senior Managing Editor | Lektorat und Produktion"
+        id: carl-auer-senior
         organization: "Carl-Auer Systeme Verlag GmbH, Heidelberg"
         date: "November 2021 – heute"
         bullets:
@@ -116,56 +130,83 @@ sections:
           - >-
             Redaktionelle Workflows für Print und Digital neu erarbeitet.
       - role: "Wissenschaftlicher Mitarbeiter"
+        id: uni-heidelberg-wimi
         organization: "Ruprecht-Karls-Universität Heidelberg"
         date: "März 2021 – Oktober 2021"
         description: >-
           Im Forschungsprojekt "Culture Wars" der Universität Heidelberg habe ich über die Twitter-API Sprachdaten extrahiert und korpuslinguistisch untersucht.
       - role: "Werkstudent"
+        id: carl-auer-werkstudent
         organization: "Carl-Auer Systeme Verlag GmbH, Heidelberg"
         date: "Oktober 2019 – September 2021"
 
   - title: Ausbildung
+    id: ausbildung
     type: cards
     cards:
       - role: "Master of Arts (MA), Germanistik"
+        id: ma-germanistik
         organization: "Ruprecht-Karls-Universität Heidelberg"
         date: "2019 – 2021"
       - role: "Bachelor of Arts (BA), Germanistik und Geschichte"
+        id: ba-germanistik-geschichte
         organization: "Ruprecht-Karls-Universität Heidelberg"
         date: "2015 – 2019"
 
   - title: "Fortbildungen und Seminare"
+    id: fortbildungen
     type: cards
     cards:
       - role: "AI Literacy: KI-Kompetenz für Medien"
+        id: ai-literacy
       - role: "Systemische Organisationsberatung (Grundkurs, simon weber friends)"
+        id: systemische-organisationsberatung
       - role: "XML-Grundlagen"
+        id: xml-grundlagen
       - role: "UX Strategy Fundamentals"
+        id: ux-strategy
       - role: "NLP-Practitioner"
+        id: nlp-practitioner
 
   - title: "Kenntnisse & Kompetenzen"
+    id: kompetenzen
     type: cards
     cards:
       - role: "KI-Werkzeuge bauen & einführen: lokale LLMs (Ollama), RAG, Prompt Engineering, KI Prompting"
+        id: ki-werkzeuge
       - role: "Prozessautomatisierung redaktioneller und dokumentenbasierter Abläufe"
+        id: prozessautomatisierung
       - role: "Office-/Word-Add-ins (Office.js), Python-Tooling"
+        id: office-addins
       - role: "Digitale Barrierefreiheit (BFSG, WCAG)"
+        id: barrierefreiheit
       - role: "Wissensmanagement & Wissensvermittlung"
+        id: wissensmanagement
       - role: "Team- & Stakeholder-Koordination, crossfunktionale Zusammenarbeit"
+        id: team-koordination
       - role: "Verlagsmanagement & redaktionelle Koordination"
+        id: verlagsmanagement
       - role: "Digitale Medien & Content-Strategie"
+        id: digitale-medien
       - role: "Projektmanagement"
+        id: projektmanagement
       - role: "Erprobt / prototypisch: XML, XSLT, Single-Source-Publishing (aufgebaut, nicht produktiv ausgerollt)"
+        id: xml-xslt
 
   - title: Sprachen
+    id: sprachen
     type: cards
     cards:
       - role: "Deutsch"
+        id: deutsch
         organization: "Muttersprache"
       - role: "Englisch"
+        id: englisch
         organization: "Verhandlungssicher (C1)"
       - role: "Spanisch"
+        id: spanisch
         organization: "Gute Kenntnisse"
 
   - title: Kontakt
+    id: kontakt
     form_endpoint: "https://formspree.io/f/xqennrpq"
