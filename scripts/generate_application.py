@@ -186,6 +186,10 @@ def build_html(application, content, sender, sections):
 # Profilseite nutzt unveraendert die dortigen Klassen, damit beide PDFs gleich
 # aussehen.
 LETTER_CSS = """
+/* Breitere Seitenraender und mehr Luft vor den Sektionen als im CV-PDF: die
+   Bewerbung ist kuerzer, der gewonnene Platz kostet hier keine Seite. */
+@page { margin: 1.6cm 2.3cm; }
+h2 { margin-top: 0.9cm; }
 .letter { page-break-after: always; }
 .letter address { font-style: normal; }
 .letter .sender { text-align: right; font-size: 9pt; color: #444; margin-bottom: 1.4cm; }
